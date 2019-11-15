@@ -1,0 +1,200 @@
+nav{
+    font-family: 'Raleway', sans-serif;
+    background-color: transparent;
+    width: 100vw;
+    background-color: transparent;
+    z-index: 10;
+}
+.dropdown{
+    .nav-header{
+        font-size: 0.875rem;
+    }
+    .dropdown-toggle::after{
+        border: none;
+        content: '\f107';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: bold;
+        left: 100%;
+        color: white;
+        vertical-align: top;
+        transform: rotate(0deg);
+        transition: .4s;
+    }
+}
+
+.dropdown.shop{
+    .dropdown-menu{
+        width: 800px;
+        border: none;
+    }
+    .shopCover{
+        background-image: url(../images/9682515427_2_1_8.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+    }
+    .shopDualCard{
+        .flex-column{
+            width: 40%;
+        }
+        a{
+            margin-bottom: 12px;
+        }
+    }
+    .shopNav{
+        a{
+            font-size: .75rem;
+        }
+        #trendy:after{
+            content: '  \f06d  - hot';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: bold;
+            left: 100%;
+            color: $rose;
+        }
+    }
+}
+
+.dropdown.pages{
+    .dropdown-menu{
+        width: 700px;
+        border: none;
+    }
+    .pagesCover{
+        background-image: url(../images/201912_1104_m_na_img1.jpg.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+    }
+    .pagesNav1,
+    .pagesNav2{
+        a{
+            font-size: .75rem;
+        }
+    }
+    .pagesNav1{
+        #parallax:after{
+            content: ' \f135   - trending';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: bold;
+            left: 100%;
+            color: $rose;
+        }
+    }
+}
+
+.dropdown.features{
+    .dropdown-menu{
+        width: 600px;
+        border: none;
+    }
+    .featuresCover{
+        background-image: url(../images/6306407712_1_1_3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+    }
+    .featuresNav1,
+    .featuresNav2{
+        a{
+            font-size: .75rem;
+        }
+    }
+}
+
+#navbarSearch{
+    #containerSearch{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        #innerSearch{
+            background-color: white;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            height: 0;
+        }
+    }
+    .close{
+        font-size: 4rem;
+    }
+    .close:active, .close:focus{
+        outline: 0;
+        border: none;
+    }
+    form{
+        position: absolute;
+        top: 50%;
+        right: 10%;
+        left: 10%;
+        input{
+            font-size: 2.5rem;
+            border: none;
+        }
+
+        .btn-outline-success{
+            font-size: 2.5rem;
+            border-color: $rose;
+            color: $rose;
+            width: 100%;
+        }
+        .btn-outline-success:hover{
+            background-color: $rose;
+            color: white;
+            transition: .4s;
+        }   
+        hr{
+            width: 100%;
+            border: 3px solid #dedede ;
+            margin-left: 0px;
+            margin-right: 0;
+            margin-top: 30px;
+
+        }
+    }  
+}
+
+#navbarProfile{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 60%;
+    #innerProfile{
+        background-color: white;
+    }
+    .row>div{
+        border-right: .7px solid #36373870;
+    }
+    .row>div:last-child{
+        border-right: none;
+    }
+    i{
+        font-size: 2rem;
+        color: $rose;
+    }
+    a.text-muted{
+        font-size: 1.25rem;
+    }
+    h2.text-muted{
+        font-size: .875rem;
+        text-align: center;
+    }
+
+    .position-relative:hover{
+        a.text-muted,
+        h2.text-muted{
+            color: $rose!important;
+        }
+    }
+    .close{
+        font-size: 4rem;
+    }
+    .close:active, .close:focus{
+        outline: 0;
+        border: none;
+    }
+}

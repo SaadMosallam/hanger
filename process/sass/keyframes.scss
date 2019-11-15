@@ -49,7 +49,7 @@
     }
 
     100% {
-        transform: translateY(0px);
+        transform: translateY(-10px);
         opacity: 1;
     }
 }
@@ -80,15 +80,14 @@
 
 @keyframes slide-right {
     0% {
-        transform: translateX(-40vw);
+        transform: translateX(-100px);
         opacity: 0;
     }
-
     100% {
         transform: translateX(0px);
         opacity: 1;
     }
-}
+  }
 
 @keyframes slide-left {
     0% {
