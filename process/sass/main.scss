@@ -1,0 +1,339 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+#img-cards-overlay {
+    background-color: #f9f9f9;
+
+    .card:hover {
+        &>div {
+            background-color: rgba(0, 0, 0, 0.7);
+            transition: 300ms linear background-color;
+        }
+    }
+
+    a {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        font-size: 1.125rem;
+        line-height: 1.875rem;
+        text-shadow: 1px 1px 1px #000;
+    }
+
+    p {
+        font-family: "Nothing You Could Do", sans-serif, "Arial", "Helvetica";
+        color: $rose;
+        text-shadow: 0px 1px 1px #222;
+        line-height: 1.125rem;
+    }
+}
+
+#essentials-men,
+#winter-women {
+    height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h1 {
+        font-family: "Playfair Display", serif;
+        color: white;
+        font-weight: 700;
+        // line-height: 1.875rem;
+        text-align: center;
+        font-size: 3rem;
+
+        span {
+            font-family: "Nothing You Could Do", sans-serif, "Arial", "Helvetica";
+            color: $rose;
+            text-shadow: 0px 1px 1px #222;
+            font-size: 2.125rem;
+            margin-top: 1.875rem;
+        }
+    }
+
+    p {
+        font-size: 0.875rem;
+        color: white;
+        width: 40%;
+        text-align: center;
+    }
+
+    .btn-outline-success {
+        color: #fff;
+        border: 2px solid white;
+        border-radius: 2.5rem;
+        height: 3.625rem;
+        padding: 0.625rem 1.875rem;
+        line-height: 1.875rem;
+        font-size: 1rem;
+        font-weight: 700;
+        transition: all 0.2s ease-in-out;
+        text-transform: uppercase;
+        opacity: 0;
+    }
+
+    .btn-outline-success:hover {
+        background-color: #6967677c;
+    }
+
+    &>div.in-view {
+        h1 {
+            animation: scale-up-center-main 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        }
+
+        .btn-outline-success {
+            animation: slide-bottom-main 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+    }
+}
+
+#essentials-men {
+    background-image: url(../images/actor-adult-black-and-white-432059.jpg);
+    background-position: 30% 30%;
+
+}
+
+#winter-women {
+    background-image: url(../images/new-look-winter-women-2.jpg);
+    background-position: 30% 30%;
+}
+
+#women-coats,
+#men-wear {
+    height: 100vh;
+
+    .row {
+        &>div {
+            height: 100%;
+        }
+    }
+    #carousel-coats,
+    #carousel-men{
+        height: 100vh;
+        &>div{
+            // background-color: aquamarine;
+            height: 90%;
+            width:90%;
+            margin: 0 auto!important;
+            padding-top: 50px;
+        }
+    }
+    
+   
+    
+
+    h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        
+        span {
+            font-size: 1rem;
+            color: $rose;
+        }
+    }
+
+    .img-container {
+        position: relative;
+
+        .card-img-bottom {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            transition: 500ms opacity;
+        }
+
+        .card-img-top {
+            opacity: 1;
+            transition: 500ms opacity;
+        }
+
+        .view {
+            position: absolute;
+            top: 80%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(34, 34, 34, 0.575);
+            color: white;
+            opacity: 0;
+            transition: 500ms opacity;
+        }
+    }
+
+    .img-container:hover {
+        .card-img-bottom {
+            opacity: 1;
+            transition: 500ms opacity;
+        }
+
+        .card-img-top {
+            opacity: 0;
+            transition: 500ms opacity;
+        }
+
+        .view {
+            opacity: 1;
+            transition: 500ms opacity;
+        }
+        .view:hover{
+            background-color: rgba(34, 34, 34, 0.775);
+            transition: 500ms background-color;
+        }
+    }
+
+    .card-body {
+        h5 {
+            font-size: .8rem;
+            text-transform: capitalize;
+            span {
+                font-size: 1.125rem;
+                color: $rose;
+            }
+        }
+
+        h6 {
+            margin-bottom: 0.75rem;
+        }
+
+        .btn-outline-success {
+            border: 2px solid black;
+            border-radius: 0;
+            font-size: 0.875rem;
+            color: black;
+        }
+
+        .btn-outline-success:hover {
+            background-color: white;
+            color: $rose;
+            border: 2px solid $rose;
+            border-radius: 2.5rem;
+            transition: 500ms;
+        }
+    }
+
+    .owl-dot:focus {
+        outline: 0;
+    }
+
+    .animation-element.in-view {
+        animation: slide-top-carousel 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+}
+
+#women-coats {
+    #background-coats {
+        background-image: url(../images/women_coats_img3.jpg.webp);
+        background-size: cover;
+        background-position-x: 70%;
+    }
+}
+
+#men-wear {
+    #background-men {
+        background-image: url(../images/men-wear.webp);
+        background-size: cover;
+    }
+}
+
+#benefits {
+    background-color: #f9f9f9;
+
+    .row>div {
+        border-right: .7px solid #36373870;
+    }
+
+    .row>div:last-child {
+        border-right: none;
+    }
+
+    i {
+        font-size: 2rem;
+        color: $rose;
+    }
+
+    h1.text-muted {
+        font-size: 1.25rem;
+    }
+
+    h2.text-muted {
+        font-size: .875rem;
+        text-align: center;
+    }
+
+    .position-relative:hover {
+
+        a.text-muted,
+        h2.text-muted {
+            color: $rose !important;
+        }
+    }
+
+    .close {
+        font-size: 4rem;
+    }
+
+    .close:active,
+    .close:focus {
+        outline: 0;
+        border: none;
+    }
+}
+
+#other{
+    h2{
+        font-size: 1.125rem;
+        margin-bottom: 1.0625rem;
+    }
+    li{
+        img{
+            width: 64px;
+            height: 64px;
+        }
+    }
+    .card-img-overlay:hover{
+        background-color: rgba(0, 0, 0, 0.5);
+        .btn-outline-success{
+            animation: slide-br .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+    }
+    .card-img{
+        
+    }
+    .card-img-overlay{
+        input{
+            background-color: rgba(255, 255, 255, 0.9);
+            font-size: .85rem;
+            border-radius: 0;
+            border:none;
+        }
+        .btn-outline-success{
+            background-color: rgb(204, 204, 204);
+            border-radius: 0;
+            border: none;
+            color: #fff;
+            opacity: 0;
+            animation: slide-br-reverse .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+        .btn-outline-success:hover{
+            background-color: rgb(148, 148, 148);
+            color: rgb(243, 243, 243);
+            opacity: 0;
+        }
+    }
+    .media-body{
+        a{
+            font-size: 0.8125rem;
+        }
+        ul{
+            font-size: 0.8125rem;
+            
+        }
+        p{
+            font-size: 0.8125rem;
+        }
+    }
+}

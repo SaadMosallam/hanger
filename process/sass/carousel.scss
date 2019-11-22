@@ -1,28 +1,197 @@
-.carousel-item{
+#carouselHeader {
+    width: 100vw;
+    height: 100v;
+}
+
+.carousel-progress-bar {
+    position: absolute;
+    width: 0%;
+    border: 2px solid $rose;
+    color: $rose;
+    z-index: 9;
+}
+
+.carousel-item {
     width: 100vw;
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-#carousel-0{
-    background-image: url(../images/men-carousel1.webp);
+
+#carousel-0 {
+    background-image: url(../images/carousel-men-1.webp);
+
+    #hanger-front {
+        width: 40%;
+        height: 50%;
+        position: absolute;
+        top: 25%;
+        left: 30%;
+        background-image: url(../images/hanger-front.svg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0;
+    }
+
+    &.active {
+        #hanger-front {
+            animation: slide-top 750ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation-delay: 1ms;
+        }
+    }
+
+    &.active.carousel-item-left,
+    &.active.carousel-item-right {
+        #hanger-front {
+            animation: slide-down 750ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+    }
 }
-#carousel-1{
-    background-image: url(../images/women-carousel1.webp);
+
+#carousel-1 {
+    background-image: url(../images/carousel-women-1.webp);
+
+    #hanger-front-1 {
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        top: 25%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        background-image: url(../images/hanger-front2.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0;
+    }
+
+    &.active {
+        #hanger-front-1 {
+            animation: slide-top 750ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+
+    }
+
+    &.active.carousel-item-left,
+    &.active.carousel-item-right {
+        #hanger-front-1 {
+            animation: slide-down 750ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+    }
 }
-#carousel-2{
-    background-image: url(../images/men-carousel2.webp);
+
+#carousel-2 {
+    background-image: url(../images/carousel-men-2.webp);
 }
-#carousel-3{
+
+#carousel-3 {
     background-image: url(../images/carousel-winter-1-2.webp);
     background-position: top;
 }
-#carousel-4{
+
+#carousel-4 {
     background-image: url(../images/carousel-winter-3-4.webp);
     background-position: top;
 }
-#carousel-5{
+
+#carousel-5 {
     background-image: url(../images/carousel-winter-5-6.webp);
     background-position: top;
+}
+
+.carousel-fade {
+    .carousel-item {
+        opacity: 0;
+        transition-duration: 1s;
+        transition-property: opacity;
+        transition-timing-function: ease-in-out;
+    }
+
+    .carousel-item.active,
+    .carousel-item-next.carousel-item-left,
+    .carousel-item-prev.carousel-item-right {
+        opacity: 1;
+        transition: 500ms opacity ease-in;
+        z-index: 2;
+    }
+
+    .active.carousel-item-left,
+    .active.carousel-item-right {
+        opacity: 0;
+        transition: 500ms opacity ease-out;
+        z-index: 1;
+    }
+
+    .carousel-item-next,
+    .carousel-item-prev,
+    .carousel-item.active,
+    .active.carousel-item-left,
+    .active.carousel-item-prev {
+        transform: translateX(0)!important;
+        transform: translate3d(0, 0, 0)!important;
+    }
+
+}
+
+
+.thumbnail {
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: none;
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 100px;
+    height: 100px;
+    top: 45%;
+    background-color: black;
+    z-index: 3;
+}
+
+.carousel-control-prev {
+    left: 1%;
+
+    .thumbnail {
+        left: 0;
+        animation: swing-right-bck 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+}
+
+.carousel-control-next {
+    right: 1%;
+
+    .thumbnail {
+        right: 0;
+        animation: swing-left-bck 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+    }
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: white;
+    transition: 400ms background-color;
+
+    .fa-angle-right:before,
+    .fa-angle-left:before {
+        color: black;
+        transition: 400ms color;
+    }
+
+    .thumbnail {
+        display: block;
+    }
+}
+
+.fa-angle-right:before,
+.fa-angle-left:before {
+    font-size: 2.7rem;
 }

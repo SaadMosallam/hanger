@@ -1,0 +1,181 @@
+@media (min-width: 991.98px){
+    .navbar.navbar-colored{
+        background-color: #de7071;
+        height: 62px;
+        transition: 750ms all ease-in;
+        .navbar-brand{
+            animation: scale-down-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            margin-top: -10px;        
+        }
+        .navbar-nav{
+            a.nav-item{
+                animation: scale-down-top-navbar-nav 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            }
+            margin-left: 0!important;
+            margin-top: 3px!important;
+            transition: margin .4s;
+        }
+        #navbar-nav-left{
+            margin-top: 0px!important;
+        }
+    }
+    .navbar{
+        .navbar-brand{
+            animation: scale-up-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            margin-top: -8px;        
+        }
+        .navbar-nav{
+            a.nav-item{
+                animation: scale-up-top-navbar-nav 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            }
+            transition: margin .4s;
+        }
+    }
+    .dropdown:hover{
+        .dropdown-toggle::after{
+            transform: rotate(180deg);
+            transition: .4s;
+        }
+        .dropdown-menu.show{
+            border-top: 20px solid transparent !important;
+            animation: slide-top-nav 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+    }
+    .navbar-collapse{
+        .dropdown-item:hover,a.nav-header:hover{
+            color: $rose!important;
+            background-color: white;
+            transition: 700ms;
+        }
+    }
+}
+
+@media (min-width: 991.98px) and (max-width: 1200px) {
+    .dropdown.pages,
+    .dropdown.features{
+        .dropdown-menu{
+            left: -200%;
+        }
+    }
+    
+}
+
+@media (max-width: 991.98px) {
+    .navbar{
+        background-color: #de7071;
+    }
+    nav{
+        height: 62px;
+    }
+    .navbar-hide{
+        animation: slide-top-navbar 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) ;
+        display: none;
+    }
+    .navbar-show{
+        animation: slide-down-navbar 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) ;
+        display: flex;
+    }
+    .navbar-brand{
+        margin-top: -12px;
+        img{
+            width: 60px;
+            height: 60px;
+        }
+       
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #232323;
+        overflow-y: scroll;
+    }
+    .dropdown.shop,
+    .dropdown.pages,
+    .dropdown.features{
+        .dropdown-menu{
+            width: 100%;
+            border-radius: 0;
+            margin-top: 0;
+            background-color: #232323;
+        }  
+    }
+    .navbar-collapse{
+        .dropdown-item,a.nav-header,h1.nav-header{
+            color: white!important;
+        }
+    }
+    .dropdown:active,.dropdown.show{
+        .dropdown-toggle{
+            background-color: white;
+            color: $rose!important;
+            transition: 500ms;
+        }
+        & .dropdown-toggle::after{
+            color: $rose!important;
+            transition: 500ms;
+        }
+    }
+    #navbarSearch{
+        form{
+            input{
+                font-size: 2rem;
+            }
+            .btn-outline-success{
+                font-size: 2rem;
+            }
+        }
+    }
+    #navbarProfile{
+        bottom: 0%;
+    }
+    
+}
+
+@media (min-width: 575.98px)  and (max-width: 991.98px) { 
+    .navbar-collapse {
+        width: 40vw;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    #navbarProfile{
+        .row>div:nth-child(2){
+            border-right: none;
+        }
+    }
+
+}
+@media (max-width: 575.98px){ 
+    .navbar-collapse {
+        width: 80vw;
+    }
+    #navbarSearch{
+        form{
+            input{
+                font-size: 1rem;
+            }
+            .btn-outline-success{
+                font-size: 1rem;
+            }
+            hr{
+                border: 2px solid #dedede ;
+                margin-left: 0px;
+                margin-right: 0;
+                margin-top: 15px;
+    
+            }
+        }
+        .close{
+            font-size: 3rem;
+        }
+    }
+    #navbarProfile{
+        .close{
+            font-size: 3rem;
+        }
+        .row>div{
+            border-right: none;
+        }
+    }
+}

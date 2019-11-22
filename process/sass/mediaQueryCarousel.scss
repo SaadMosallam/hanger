@@ -1,0 +1,103 @@
+@media (min-width: 2000px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 200px;
+        height: 200px;
+    }
+
+    .fa-angle-right:before,
+    .fa-angle-left:before {
+        font-size: 5rem;
+    }
+}
+@media (max-width: 991.98px) {
+    #carouselheader {
+        padding-top: 62px;
+    }
+}
+
+@media (max-width: 768.98px) {
+    .carousel-item {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left;
+    }
+
+    #carousel-0 {
+        #hanger-front {
+            left: 55%;
+        }
+    }
+
+    #carousel-1 {
+        background-position: 100%;
+
+        #hanger-front-1 {
+            left: 0%;
+            margin: 0;
+        }
+    }
+
+    #carousel-2 {
+        background-position: 100%;
+    }
+}
+
+@media screen and (orientation:portrait) {
+    #carousel-0 {
+        background-position-x: 1%;
+        #hanger-front {
+            display: none;
+        }
+    }
+
+    #carousel-1 {
+        background-position-x: 98%;
+        #hanger-front-1 {
+            display: none;
+        }
+    }
+
+    #carousel-2 {
+        background-position-x: 86%;
+    }
+    #carousel-3 {
+        background-image: url(../images/carousel_winter_img2.jpg.webp);
+        background-position: top;
+    }
+
+    #carousel-4 {
+        background-image: url(../images/carousel_winter_img4.jpg.webp);
+        background-position: top;
+    }
+
+    #carousel-5 {
+        background-image: url(../images/carousel_winter_img6.jpg.webp);
+        background-position: top;
+    }
+} 
+@media screen and (orientation:portrait) and (max-width:375.98px) {
+    #carousel-0 {
+        background-position-x: 94%;
+    }
+    #carousel-1 {
+        background-position-x: 94%;
+    }
+    #carousel-2 {
+        background-position-x: 86%;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 75px;
+        height: 75px;
+    }
+
+    .fa-angle-right:before,
+    .fa-angle-left:before {
+        font-size: 2rem;
+    }
+}

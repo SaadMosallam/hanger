@@ -1,0 +1,288 @@
+@media (max-width: 991.98px) {
+    #img-cards-overlay {
+        .card {
+            &>div {
+                background-color: rgba(0, 0, 0, 0.432);
+                transition: 300ms linear background-color;
+            }
+        }
+    }
+
+    #women-coats,
+    #men-wear {
+        height: 130vh;
+        #background-coats,
+        #background-men {
+            height: 50vh;
+        }
+
+        #carousel-coats,
+        #carousel-men {
+            height: 80vh;
+            &>div{
+                padding-top: 0;
+            }
+        }
+
+        #background-men {
+            background-position-y: 20%;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    #essentials-men,
+    #winter-women {
+        height: 80vh;
+
+        p {
+            width: 80%;
+        }
+
+        h1 {
+            font-size: 2.75rem;
+
+            span {
+                font-size: 1.75rem;
+                margin-top: 1.25rem;
+            }
+        }
+    }
+
+    #women-coats,
+    #men-wear {
+        height: 150vh;
+
+        #background-coats,
+        #background-men {
+            height: 50vh;
+        }
+
+        #carousel-coats,
+        #carousel-men {
+            height: 100vh;
+            &>div{
+                padding-top: 30px;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 667.98px) {
+
+    #women-coats,
+    #men-wear {
+        height: 140vh;
+
+        #background-coats,
+        #background-men {
+            height: 50vh;
+        }
+
+        #carousel-coats,
+        #carousel-men {
+            height: 90vh;
+        }
+
+    }
+}
+
+@media (max-width: 567.98px) {
+
+    #women-coats,
+    #men-wear {
+        height: 130vh;
+
+        #background-coats,
+        #background-men {
+            height: 50vh;
+        }
+
+        #carousel-coats,
+        #carousel-men {
+            height: 80vh;
+        }
+
+    }
+}
+
+@media (max-width: 450px) {
+
+    #essentials-men,
+    #winter-women {
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+
+            span {
+                font-size: 1.5rem;
+            }
+        }
+
+        P {
+            font-size: 0.675rem;
+        }
+
+        .btn-outline-success {
+            border: 2px solid white;
+            border-radius: 1.67rem;
+            height: 2.41rem;
+            padding: 0.525rem 1.475rem;
+            line-height: 1.25rem;
+            font-size: 0.75rem;
+        }
+    }
+
+    #women-coats,
+    #men-wear {
+        height: 140vh;
+
+        h1 {
+            font-size: 1.25rem;
+            font-weight: 700;
+
+            span {
+                font-size: .75rem;
+                color: $rose;
+            }
+        }
+
+        #background-coats,
+        #background-men {
+            height: 50vh;
+        }
+
+        #carousel-coats,
+        #carousel-men {
+            height: 90vh;
+
+            &>div {
+                width: 75%;
+                padding-top: 20px;
+            }
+        }
+
+    }
+
+    #winter-women {
+        background-position-x: 90%;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    #img-cards-overlay {
+        a {
+            font-size: .85rem;
+            line-height: 1.75rem;
+        }
+
+        p {
+            line-height: 1rem;
+            font-size: .60rem;
+        }
+    }
+
+    #benefits {
+        .row>div:nth-child(2) {
+            border-right: none;
+        }
+    }
+
+}
+
+@media (max-width: 575.98px) {
+    #benefits {
+        .row>div {
+            border-right: none;
+        }
+    }
+}
+@media screen and (orientation:portrait){
+    @media(min-width:992px){
+        #women-coats,
+        #men-wear {
+            height: 50vh;
+    
+            #background-coats,
+            #background-men {
+                height: 50vh;
+            }
+    
+            #carousel-coats,
+            #carousel-men {
+                height: 50vh;
+            }
+    
+        }
+        #essentials-men,
+        #winter-women {
+            height: 50vh;
+        }
+    }
+    @media (min-width: 767px){
+        #women-coats,
+        #men-wear {
+            height: 100vh;
+    
+            #background-coats,
+            #background-men {
+                height: 50vh;
+            }
+    
+            #carousel-coats,
+            #carousel-men {
+                height: 50vh;
+            }
+    
+        }
+        #essentials-men,
+        #winter-women {
+            height: 50vh;
+        }
+    }
+    @media (max-width: 766.98px) { 
+        #women-coats,
+        #men-wear {
+            height: 130vh;
+    
+            #background-coats,
+            #background-men {
+                height: 50vh;
+            }
+    
+            #carousel-coats,
+            #carousel-men {
+                height: 80vh;
+            }
+    
+        }
+        #essentials-men,
+        #winter-women {
+            height: 50vh;
+        }
+    }
+    @media (max-width: 374.98px) { 
+        #women-coats,
+        #men-wear {
+            height: 140vh;
+    
+            #background-coats,
+            #background-men {
+                height: 50vh;
+            }
+    
+            #carousel-coats,
+            #carousel-men {
+                height: 90vh;
+            }
+    
+        }
+        #essentials-men,
+        #winter-women {
+            height: 50vh;
+        }
+    }
+}

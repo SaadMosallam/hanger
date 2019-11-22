@@ -1,0 +1,32 @@
+footer{
+    background-color: #232323;
+    color: #dbdbdb;
+    position: relative;
+    a{
+        color: #dbdbdb;
+    }
+    #links{
+        a{
+            font-size: 0.75rem;
+        }
+    }
+    p{
+        font-size: 0.75rem;
+    }
+    a:hover{
+        text-decoration: none;
+        color: $rose;
+    }
+    #pageTop{
+        font-size: 2rem;
+        position: absolute;
+        right: 10%;
+    }
+}
+@media (max-width:600px){
+    #pageTop{
+        font-size: 2rem;
+        position: absolute;
+        bottom: 10%;
+    }
+}

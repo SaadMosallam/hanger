@@ -16,15 +16,17 @@ $(document).ready(function () {
 
         //detecting document width and height
         var screenWidth = $(document).width();
-        var screenHeight = $(document).height();
+        var screenHeight = $(window).height();
         // console.log(screenWidth, screenHeight);
 
-        //set the height of the navbar collapse equal to the height of the document
-        $('#navbarNavCollapse').css({
-            height: screenHeight - $('nav').outerHeight()
-        });
+
+
 
         if (screenWidth < 992) {
+            //set the height of the navbar collapse equal to the height of the document
+            $('#navbarNavCollapse').css({
+                height: screenHeight - $('nav').outerHeight()
+            });
             //adding slide animation up/down when clicking on dropdown toggle
             $('.navbar-collapse').click(function (e) {
                 // e.stopPropagation();
@@ -42,6 +44,8 @@ $(document).ready(function () {
                 }, 400);
             });
         }
+
+
         //stop the auto height detect by preventing default navbar collapse event
         // animate the slide of the navbar collapse right and left
         $('#navbarNavCollapse').on('show.bs.collapse', function (e) {
@@ -146,72 +150,190 @@ $(document).ready(function () {
         });
     });
     //--------------------------------- Carousel ------------------------------------------------------------//
-    $(".owl-carousel").owlCarousel();
-    //--------------------------------- Carousel Progress bar ----------------------------------------------//
-    var time = 7; // time in seconds
+    $('.carousel').carousel({
+        interval: false
+    });
+    //--------------------------------- carousel-0 badge -------------------------------------//
+    if (!(isMobile)) {
 
+        var mouseX = 0,
+            mouseXnew = 0,
+            flag,
+            distance = 0,
+            loop,
+            hangerBadge = $("#hanger-front"),
+            hangerX,
+            timer,
+            screenWidth = $(document).width();
+
+
+        $("#carousel-0.active").mousemove(function (event) {
+            clearInterval(timer);
+            mouseXnew = event.pageX;
+
+            if (mouseXnew > mouseX) {
+                distance = mouseXnew - mouseX;
+                flag = 0;
+                mouseX = mouseXnew;
+            } else if (mouseXnew < mouseX) {
+                flag = 1;
+                distance = mouseX - mouseXnew;
+                mouseX = mouseXnew;
+            }
+            timer = setTimeout(function () {
+                flag = 10;
+            }, 1000);
+        });
+
+
+
+
+        $("#carousel-0.active").mouseleave(function () {
+            clearInterval(loop);
+        });
+        $("#carousel-0.active").mouseenter(function (e) {
+            mouseX = e.pageX;
+            hangerX = $('#hanger-front').position().left;
+            loop = setInterval(function () {
+                // console.log("position",hangerX,"distance",distance,"mouseX",mouseX,"mouseXnew",mouseXnew);
+                // change 12 to alter damping higher is slower
+                if (flag === 1) {
+                    hangerX += distance / 60;
+                    if (hangerX > screenWidth / 1.8) {
+                        hangerX = screenWidth / 1.8;
+                    }
+                    hangerBadge.css({
+                        left: hangerX
+                    });
+                } else if (flag === 0) {
+                    hangerX -= distance / 60;
+                    if (hangerX < screenWidth / 9) {
+                        hangerX = screenWidth / 9;
+                    }
+                    hangerBadge.css({
+                        left: hangerX
+                    });
+                }
+
+            }, 1);
+
+        });
+    }
+
+    //determine the next and previous slide thumbnail for contorls---------------------------------------------
+    function determineThumbnail() {
+        switch (currentIndex) {
+            case 0:
+                // console.log("0");
+                var bgprev = $('#carousel-5').css("background-image");
+                $('.carousel-control-prev .thumbnail').css('background-image', bgprev);
+                // console.log(bgprev);
+                var bgnext = $('#carousel-1').css("background-image");
+                $('.carousel-control-next .thumbnail').css('background-image', bgnext);
+                // console.log(bgnext);
+                break;
+            case 1:
+                // console.log(1);
+                var bgprev = $('#carousel-0').css("background-image");
+                $('.carousel-control-prev .thumbnail').css('background-image', bgprev);
+                // console.log(bgprev);
+                var bgnext = $('#carousel-2').css("background-image");
+                $('.carousel-control-next .thumbnail').css('background-image', bgnext);
+                break;
+            case 2:
+                // console.log(2);
+                var bgprev = $('#carousel-1').css("background-image");
+                $('.carousel-control-prev .thumbnail').css('background-image', bgprev);
+                // console.log(bgprev);
+                var bgnext = $('#carousel-3').css("background-image");
+                $('.carousel-control-next .thumbnail').css('background-image', bgnext);
+                break;
+            case 3:
+                // console.log(3);
+                var bgprev = $('#carousel-2').css("background-image");
+                $('.carousel-control-prev .thumbnail').css('background-image', bgprev);
+                // console.log(bgprev);
+                var bgnext = $('#carousel-4').css("background-image");
+                $('.carousel-control-next .thumbnail').css('background-image', bgnext);
+                break;
+            case 4:
+                // console.log(4);
+                var bgprev = $('#carousel-3').css("background-image");
+                $('.carousel-control-prev .thumbnail').css('background-image', bgprev);
+                // console.log(bgprev);
+                var bgnext = $('#carousel-5').css("background-image");
+                $('.carousel-control-next .thumbnail').css('background-image', bgnext);
+                break;
+            case 5:
+                // console.log(5);
+                var bgprev = $('#carousel-4').css("background-image");
+                $('.carousel-control-prev .thumbnail').css('background-image', bgprev);
+                // console.log(bgprev);
+                var bgnext = $('#carousel-0').css("background-image");
+                $('.carousel-control-next .thumbnail').css('background-image', bgnext);
+                break;
+            default:
+                console.log('wrong');
+        }
+    }
+    var currentIndex = 0;
+    // console.log($('.carousel-control-prev').css('width'),$('.carousel-control-prev').css('height'));
+
+    $('.carousel-control-prev .thumbnail').css('width', $('.carousel-control-prev').css('width'));
+    $('.carousel-control-prev .thumbnail').css('height', $('.carousel-control-prev').css('height'));
+    $('.carousel-control-next .thumbnail').css('width', $('.carousel-control-next').css('width'));
+    $('.carousel-control-next .thumbnail').css('height', $('.carousel-control-next').css('height'));
+
+    determineThumbnail();
+
+    $('#carouselheader').on('slide.bs.carousel', function (ev) {
+        currentIndex = ev.to;
+        determineThumbnail();
+        //clear the tick intervak and restart progress bar
+        moved();
+    });
+    //------------------------------------progress bar---------------------------------------------------//
+
+    var time = 10; // time in seconds
     var $progressBar,
-        $bar,
-        $elem,
         isPause,
         tick,
-        percentTime;
+        percentTime = 0;
+    $progressBar = $('.carousel-progress-bar');
 
-    //Init the carousel
-    $("#owl-demo").owlCarousel({
-        slideSpeed: 500,
-        paginationSpeed: 500,
-        singleItem: true,
-        afterInit: progressBar,
-        afterMove: moved,
-        startDragging: pauseOnDragging
-    });
-
-    //Init progressBar where elem is $("#owl-demo")
-    function progressBar(elem) {
-        $elem = elem;
-        //build progress bar elements
-        buildProgressBar();
-        //start counting
-        start();
-    }
-
-    //create div#progressBar and div#bar then prepend to $("#owl-demo")
-    function buildProgressBar() {
-        $progressBar = $("<div>", {
-            id: "progressBar"
-        });
-        $bar = $("<div>", {
-            id: "bar"
-        });
-        $progressBar.append($bar).prependTo($elem);
-    }
-
+    //Init progressBar
     function start() {
         //reset timer
         percentTime = 0;
         isPause = false;
         //run interval every 0.01 second
         tick = setInterval(interval, 10);
-    };
+    }
+    //restart progress bar
+    function restart() {
+        $progressBar.css({
+            width: "0%",
+            opacity: 0
+        });
+        //reset timer
+        percentTime = 0;
+        //run interval every 0.01 second
+        tick = setInterval(interval, 10);
+    }
 
     function interval() {
         if (isPause === false) {
             percentTime += 1 / time;
-            $bar.css({
-                width: percentTime + "%"
+            $progressBar.css({
+                width: percentTime + "%",
+                opacity: 1
             });
             //if percentTime is equal or greater than 100
-            if (percentTime >= 100) {
+            if (percentTime >= 99.99) {
                 //slide to next item 
-                $elem.trigger('owl.next')
+                $('#carouselheader').carousel('next');
             }
         }
-    }
-
-    //pause while dragging 
-    function pauseOnDragging() {
-        isPause = true;
     }
 
     //moved callback
@@ -219,14 +341,135 @@ $(document).ready(function () {
         //clear interval
         clearTimeout(tick);
         //start again
-        start();
+        restart();
     }
 
-    //uncomment this to make pause on mouseover 
-    // $elem.on('mouseover',function(){
-    //   isPause = true;
-    // })
-    // $elem.on('mouseout',function(){
-    //   isPause = false;
-    // })
+    if (!(isMobile)) {
+        //pause on mouseover 
+        $('#carouselheader')
+            .hover(function () {
+                isPause = true;
+            }, function () {
+                isPause = false;
+            });
+
+        $('#carouselheader .carousel-control-prev, #carouselheader .carousel-control-next').hover(function () {
+            isPause = true;
+        });
+    }
+    //start the progress bar on document load
+    start();
+
+    //-----------------------------------------Scroll events--------------------------------------------------
+    var $animation_elements = $('.animation-element');
+    var $window = $(window);
+    var scrollTopVal = 0;
+
+    function check_if_in_view() {
+
+        // console.log('check_if_in_view',$window.scrollTop());
+
+        //navbar animation on scroll
+        if (isMobile) {
+            if ($window.scrollTop() > scrollTopVal) {
+
+                scrollTopVal = $window.scrollTop();
+                if ($('.navbar-collapse.show').exists()) {
+                    // console.log('exist');
+                } else {
+                    $('nav.navbar').removeClass('navbar-show');
+                    $('nav.navbar').addClass('navbar-hide');
+                }
+
+            } else {
+                scrollTopVal = $window.scrollTop();
+                if ($('.navbar-collapse.show').exists()) {
+                    // console.log('exist');
+                } else {
+                    $('nav.navbar').removeClass('navbar-hide');
+                    $('nav.navbar').addClass('navbar-show');
+                }
+            }
+        } else {
+            if ($window.scrollTop() > 50) {
+                $('nav.navbar').addClass('navbar-colored');
+            } else {
+                $('nav.navbar').removeClass('navbar-colored');
+            }
+        }
+
+        var window_height = $window.height();
+        var window_top_position = $window.scrollTop();
+        var window_bottom_position = (window_top_position + window_height);
+
+        $.each($animation_elements, function () {
+            var $element = $(this);
+            var element_height = $element.outerHeight();
+            var element_top_position = $element.offset().top;
+            var element_bottom_position = (element_top_position + element_height);
+
+            //check to see if this current container is within viewport
+            if ((element_bottom_position >= window_top_position) &&
+                (element_top_position <= window_bottom_position)) {
+                $element.addClass('in-view');
+            } else {
+                // $element.removeClass('in-view');
+            }
+        });
+    }
+
+    $window.on('scroll resize', check_if_in_view);
+    $window.trigger('scroll');
+    //---------------------------------------Women Coats Carousel------------------------------------------
+    $(".owl-carousel").owlCarousel({
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        dots: true,
+        dotsEach: true,
+        slideTransition: 'linear',
+        rewind: true,
+        autoHeight: false,
+        autoWidth: false,
+        responsive: {
+            0: {
+              items: 1
+            },
+            450: {
+              items: 2
+            },
+            768: {
+                items:3
+            },
+            993: {
+              items: 2
+            },
+            1400: {
+              items: 3
+            }
+            
+        }
+    });
+    //---------------------------------------footer scrollTop link------------------------------------------
+    $('#pageTop').click(function(e){
+        e.preventDefault();
+        var body = $("html, body");
+        body.stop().animate({scrollTop:0}, 1000, 'swing');
+    });
+
+    // $('.img-container img').hover(function () {
+    //     // console.log($('.img-container img').attr('src')) ;
+    //     var primarySrc = $(this).attr('src');
+    //     // console.log(primarySrc.slice(0,-12) +"secondary.jpeg") ;
+    //     var secondarySrc = primarySrc.slice(0, -12) + "secondary.jpeg";
+    //     $(this).attr('src', secondarySrc);
+    // }, function () {
+    //     // console.log($('.img-container img').attr('src')) ;
+    //     var secondarySrc = $(this).attr('src');
+    //     // console.log(secondarySrc.slice(0,-14) +"primary.jpeg") ;
+    //     var primarySrc = secondarySrc.slice(0, -14) + "primary.jpeg";
+    //     $(this).attr('src', primarySrc);
+    // });
 });
+//-----------------------------------------document ready--------------------------------------------------
