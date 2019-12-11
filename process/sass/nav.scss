@@ -1,9 +1,10 @@
-
 nav{
     font-family: 'Raleway', sans-serif;
     background-color: transparent;
     width: 100vw;
     z-index: 10;
+    font-size: 14px;
+    animation: scale-up-height .5s ease-out both;
 }
 .navbar-brand{
     img{
@@ -12,30 +13,38 @@ nav{
     }
 }
 
-#navbar-nav-left{
+#nav-right,#nav-left{
     .nav-item{
         font-size: 1.25rem;
     }
 }
+#nav-right{
+    margin-right: 13px
+}
 
-
-
-.dropdown{
-    .nav-header{
-        font-size: 0.875rem;
-    }
-    .dropdown-toggle::after{
-        border: none;
-        content: '\f107';
-        font-family: 'Font Awesome 5 Free';
-        font-weight: bold;
-        left: 100%;
-        color: white;
-        vertical-align: top;
-        transform: rotate(0deg);
-        transition: .4s;
+.navbar-toggler:focus{
+    box-shadow: none;
+    outline: none;
+}
+nav{
+    .dropdown{
+        .nav-header{
+            font-size: 0.875rem;
+        }
+        .dropdown-toggle::after{
+            border: none;
+            content: '\f107';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: bold;
+            left: 100%;
+            color: white;
+            vertical-align: top;
+            transform: rotate(0deg);
+            transition: .4s;
+        }
     }
 }
+
 
 
 
@@ -150,6 +159,7 @@ nav{
         input{
             font-size: 2.5rem;
             border: none;
+            box-shadow: none;
         }
         .btn-outline-success{
             font-size: 2.5rem;
@@ -212,5 +222,25 @@ nav{
     .close:active, .close:focus{
         outline: 0;
         border: none;
+    }
+}
+//-------------------------------------navbar white--------------------------------------------
+
+.navbar-white{
+    top: 0;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    .dropdown{
+        .dropdown-toggle::after{
+            color: black;
+        }
+    }
+
+    .nav-link{
+        color: black!important;
+    }
+
+    #navbarSearch{
+        position: fixed;
+        z-index: 10;
     }
 }

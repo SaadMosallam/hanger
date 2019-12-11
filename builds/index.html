@@ -9,20 +9,32 @@
     <!-------------------------------CSS------------------------------------------>
     <link rel="stylesheet" href="./css/all.min.fontawesome.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    
 
     <link rel="stylesheet" href="./css/owl.carousel.min.css">
     <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="./css/style.css">
     <!-------------------------------CSS------------------------------------------>
     <link
         href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Playfair+Display:400,700|Raleway:400,700&display=swap"
         rel="stylesheet">
 
     <link rel="shortcut icon" href="./images/hanger-logo.ico" />
-    <title>Hanger</title>
+    <title>Hanger | Clothes for Women & Men</title>
 </head>
 
 <body>
+    <div class="preloader">
+        <div>
+            <span class="loader">
+                <span class="loader-inner"></span>
+            </span>
+            <h6 class="h6 text-light mt-2">Loading...</h6>
+        </div>
+    </div>
+<!----------------------------------------------Preloader--------------------------------------->
+
     <header>
         <nav class="navbar navbar-dark navbar-expand-lg px-lg-3 px-1 px-lg-0 align-items-start
         position-fixed">
@@ -31,13 +43,13 @@
                 <img src="./images/hanger-logo.svg" alt="hanger-logo">
             </a>
 
-            <div class="navbar-nav flex-row order-1 position-relative py-1 " id="nav-left">
+            <div class="navbar-nav flex-row order-1 position-relative ml-1" id="nav-left">
                 <a class="nav-item nav-link px-2 d-lg-none d-inline-block order-last text-white" data-toggle="collapse"
                     aria-expanded="false" aria-controls="navbarSearch" href="#navbarSearch">
                     <i class="fas fa-search"></i>
                 </a>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavCollapse"
+                <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavCollapse"
                     aria-controls="navbarNavCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -70,12 +82,12 @@
                                              flex-column w-100">
                                                 <div class="d-flex flex-column py-3 position-relative mb-3 mb-lg-0">
                                                     <a class="h6 font-weight-bold stretched-link text-reset text-decoration-none nav-header"
-                                                        href="#">MensWear</a>
+                                                        href="shop.html">MensWear</a>
                                                     <img class="img-fluid" src="./images/man.jpg" alt="man">
                                                 </div>
                                                 <div class="d-flex flex-column py-3 position-relative">
                                                     <a class="h6 font-weight-bold stretched-link text-reset text-decoration-none nav-header"
-                                                        href="#">Women</a>
+                                                        href="shop.html">Women</a>
                                                     <img class="img-fluid" src="./images/woman.jpg" alt="woman">
                                                 </div>
                                             </div>
@@ -111,9 +123,6 @@
 
                     <a class="nav-item nav-link pl-lg-0 pl-3 text-uppercase font-weight-bold mr-lg-2 text-white"
                         href="#">Summer catalog</a>
-
-                    <a class="nav-item nav-link pl-lg-0 pl-3 text-uppercase font-weight-bold mr-lg-2 text-white"
-                        href="#">Latest Articles</a>
 
                     <div class="dropdown pages">
 
@@ -250,7 +259,7 @@
                 <!--navbar nav-->
             </div>
             <!--navbar collapse-->
-            <div class="navbar-nav  flex-row order-3 " id="navbar-nav-left">
+            <div class="navbar-nav  flex-row order-3" id="nav-right">
                 <a class="nav-item nav-link px-2 text-white" href="#">
                     <i class="fas fa-shopping-cart"></i>
                 </a>
@@ -424,8 +433,8 @@
         <section id="women-coats">
             <div class="row no-gutters h-100">
                 <div class="col-lg-6 col-12" id="background-coats"></div>
-                <div class="col-lg-6 col-12 d-flex flex-column h-100" id="carousel-coats">
-                    <h1 class="h4 mb-3 ml-4 mt-5">Women's Coats & Jackets
+                <div class="col-lg-6 col-12 d-flex flex-column" id="carousel-coats">
+                    <h1 class="h4 mb-3 ml-4 mt-1 mt-sm-5">Women's Coats & Jackets
                         <span class="d-block font-weight-light">NEW COLLECTIONS</span>
                     </h1>
                     <div
@@ -531,8 +540,8 @@
 
         <section id="men-wear">
             <div class="row no-gutters h-100">
-                <div class="col-lg-6 col-12  d-flex flex-column  order-last order-lg-first h-100" id="carousel-men">
-                    <h1 class="h4 mb-3 ml-4 mt-5">THE COAT SHOP
+                <div class="col-lg-6 col-12  d-flex flex-column  order-last order-lg-first" id="carousel-men">
+                    <h1 class="h4 mb-3 ml-4 mt-1 mt-sm-5">THE COAT SHOP
                         <span class="d-block font-weight-light">YOUR ULTIMATE WINTER CHECKLIST</span>
                     </h1>
                     <div
@@ -653,7 +662,7 @@
         </section>
 
         <section id="benefits" class="p-3">
-            <div class="row no-gutters h-100">
+            <div class="row no-gutters h-100 animation-element">
                 <div
                     class="col-md-3 col-sm-6 col-12 mt-sm-3 mt-4  d-flex justify-content-center align-items-center pt-2 pb-3">
                     <div class="">
@@ -686,10 +695,10 @@
             </div>
         </section>
 
-        <section id="other" class="py-5">
+        <section class="py-5 related-products">
             <div class="container d-flex">
-                <div class="row">
-                    <div class="col-lg-3 col-sm-6">
+                <div class="row justify-content-around">
+                    <div class="col-lg-3 col-sm-6 col-md-5">
                         <h2 class="text-nowrap">Top Rated Products</h2>
                         <ul class="list-unstyled pt-2">
                             <li class="media pb-2">
@@ -755,7 +764,7 @@
                         <!--list of items-->
                     </div>
                     <!--col-->
-                    <div class="col-lg-3 col-sm-6">
+                    <div class="col-lg-3 col-sm-6 col-md-5">
                         <h2>On Sale Now!</h2>
                         <ul class="list-unstyled pt-2">
                             <li class="media pb-2">
@@ -800,7 +809,7 @@
                                         src="./images/striped-long-sleeve-t-shirt-primary.jpeg" alt="">
                                 </a>
                                 <div class="media-body d-flex flex-column justify-content-between ml-1">
-                                    <a href="#" class="my-0 h6 text-nowrap text-reset text-decoration-none">Striped long-sleeve T-shirt</a>
+                                    <a href="#" class="my-0 h6 text-nowrap text-reset text-decoration-none">Striped T-shirt</a>
 
                                     <p class="text-nowrap mb-0 mt-4"><del class="text-muted font-weight-bold">EGP
                                             648.70</del> <span class="text-danger font-weight-bold">EGP 591.00</span>
@@ -813,7 +822,8 @@
                         <!--list of items-->
                     </div>
                     <!--col-->
-                    <div class="col-lg-3 col-sm-6">
+                    <div class="d-md-block d-lg-none w-100"></div>
+                    <div class="col-lg-3 col-sm-6 col-md-5">
                         <h2>Featured Products</h2>
                         <ul class="list-unstyled pt-2">
                             <li class="media pb-2">
@@ -822,7 +832,7 @@
                                         src="./images/vintage-camel-topcoat-primary.jpeg" alt="">
                                 </a>
                                 <div class="media-body d-flex flex-column justify-content-between ml-1">
-                                    <a href="#" class="my-0 h6 text-nowrap text-reset text-decoration-none">Topcoat in wool-cashmere</a>
+                                    <a href="#" class="my-0 h6 text-nowrap text-reset text-decoration-none">Topcoat in wool</a>
 
                                     <p class="text-nowrap mb-0 mt-4"><span class="font-weight-bold">EGP 7402.30</span>
                                     </p>
@@ -862,7 +872,7 @@
                         <!--list of items-->
                     </div>
                     <!--col-->
-                    <div class="col-lg-3 col-sm-6">
+                    <div class="col-lg-3 col-sm-6 col-md-5">
                         <h2>Sign Up for Promotions</h2>
                         <div class="card text-white border-0 rounded-0">
                             <img class="card-img img-fluid" src="./images/card-sign-up-4.jpg" alt="Card image">
@@ -912,9 +922,9 @@
     <script src="./js/jquery.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/script.js"></script>
-
     <script src="./js/owl.carousel.min.js"></script>
+    
+    <script src="./js/script.js"></script>
     <!-------------------------------JS------------------------------------------>
 </body>
 

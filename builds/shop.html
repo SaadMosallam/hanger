@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-------------------------------CSS------------------------------------------>
+    <link rel="stylesheet" href="./css/all.min.fontawesome.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./css/nouislider.min.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <!-------------------------------CSS------------------------------------------>
+    <link
+        href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Playfair+Display:400,700|Raleway:400,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="shortcut icon" href="./images/hanger-logo.ico" />
+    <title>Hanger | Shop</title>
+</head>
+
+<body>
+    <div class="preloader">
+        <div>
+            <span class="loader">
+                <span class="loader-inner"></span>
+            </span>
+            <h6 class="h6 text-light mt-2">Loading...</h6>
+        </div>
+    </div>
+    <!----------------------------------------------Preloader--------------------------------------->
+    <header>
+        <nav class="navbar navbar-dark bg-white navbar-white navbar-expand-lg px-lg-3 px-1 px-lg-0 align-items-start
+        position-fixed">
+
+            <a class="navbar-brand order-lg-1 order-2 pb-0" href="index.html">
+                <img src="./images/hanger-logo.svg" alt="hanger-logo">
+            </a>
+
+            <div class="navbar-nav flex-row order-1 position-relative ml-1" id="nav-left">
+                <a class="nav-item nav-link px-2 d-lg-none d-inline-block order-last" data-toggle="collapse"
+                    aria-expanded="false" aria-controls="navbarSearch" href="#navbarSearch">
+                    <i class="fas fa-search"></i>
+                </a>
+
+                <button class="navbar-toggler border-0" type="button" data-toggle="collapse"
+                    data-target="#navbarNavCollapse" aria-controls="navbarNavCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="text-dark"><i class="fas fa-bars"></i></span>
+                </button>
+            </div>
+
+
+            <div class="collapse navbar-collapse order-lg-2 order-last mt-lg-3" id="navbarNavCollapse">
+                <div class="navbar-nav mt-lg-2 ml-lg-5">
+
+                    <div class="dropdown shop">
+
+                        <a class="nav-item nav-link dropdown-toggle pl-lg-0 pl-3 text-uppercase font-weight-bold mr-lg-2"
+                            id="navbarDropdownShop" data-toggle="dropdown" href="#" aria-haspopup="true"
+                            aria-expanded="false">Shop</a>
+
+                        <div class="dropdown-menu py-0" aria-labelledby="navbarDropdownShop">
+                            <div class="row no-gutters">
+
+                                <div class="col-lg-4 d-none d-lg-inline-block shopCover"></div>
+                                <!--col-->
+                                <div class="col-lg-8 col">
+                                    <div class="row no-gutters">
+                                        <div class="col-12 d-lg-none d-flex justify-content-center mt-2">
+                                            <a class="h6 font-weight-bold text-reset text-decoration-none nav-header mt-2 mr-5 pr-3"
+                                                href="#">Shop All</a>
+                                        </div>
+                                        <!--col-->
+                                        <div class="col-lg-6 col-12 offset-lg-1 shopDualCard d-flex align-items-center">
+                                            <div class="d-flex justify-content-lg-around align-items-center flex-lg-row
+                                             flex-column w-100">
+                                                <div class="d-flex flex-column py-3 position-relative mb-3 mb-lg-0">
+                                                    <a class="h6 font-weight-bold stretched-link text-reset text-decoration-none nav-header"
+                                                        href="#">MensWear</a>
+                                                    <img class="img-fluid" src="./images/man.jpg" alt="man">
+                                                </div>
+                                                <div class="d-flex flex-column py-3 position-relative">
+                                                    <a class="h6 font-weight-bold stretched-link text-reset text-decoration-none nav-header"
+                                                        href="shopWomen.html">Women</a>
+                                                    <img class="img-fluid" src="./images/woman.jpg" alt="woman">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--col-->
+
+                                        <div
+                                            class="col-lg-4 col-12 d-flex py-3 justify-content-lg-center justify-content-center align-items-center shopNav">
+                                            <div class="d-flex flex-column">
+                                                <h1 class="h6 font-weight-bold text-nowrap nav-header">Shop New Arrivals
+                                                </h1>
+                                                <a class="dropdown-item pl-0" href="#">Blue Blazer</a>
+                                                <a class="dropdown-item pl-0" href="#">Wool Blend Hat</a>
+                                                <a class="dropdown-item pl-0" id="trendy" href="#">Trendy Watch</a>
+                                                <a class="dropdown-item pl-0" href="#">Leather Jacket</a>
+                                                <a class="dropdown-item pl-0" href="#">Wool Scarf</a>
+                                                <a class="dropdown-item pl-0" href="#">Casual Wool Top</a>
+                                            </div>
+                                        </div>
+                                        <!--col-->
+                                    </div>
+                                    <!--inner row-->
+                                </div>
+                                <!--col-->
+                            </div>
+                            <!--row-->
+
+                        </div>
+                        <!--dropdown menu-->
+
+                    </div>
+                    <!--dropdown shop-->
+
+                    <a class="nav-item nav-link pl-lg-0 pl-3 text-uppercase font-weight-bold mr-lg-2" href="#">Summer
+                        catalog</a>
+
+                    <div class="dropdown pages">
+
+                        <a class="nav-item nav-link dropdown-toggle pl-lg-0 pl-3 text-uppercase font-weight-bold mr-lg-2"
+                            id="navbarDropdownPages" data-toggle="dropdown" href="#" aria-haspopup="true"
+                            aria-expanded="false">Pages</a>
+
+                        <div class="dropdown-menu py-0" aria-labelledby="navbarDropdownPages">
+                            <div class="row no-gutters">
+
+                                <div class="col-lg-4 d-none d-lg-inline-block pagesCover"></div>
+                                <!--col-->
+                                <div class="col-lg-8 col">
+                                    <div class="row no-gutters py-lg-3 pt-lg-4">
+                                        <div class="col-lg-5 col-12 offset-lg-1 
+                                                d-flex flex-lg-row flex-column align-items-lg-start align-items-center justify-content-center
+                                                my-3 my-lg-0 pagesNav1">
+                                            <div class="d-flex flex-column">
+                                                <h1 class="h6 font-weight-bold text-nowrap nav-header">Theme Pages</h1>
+                                                <a class="dropdown-item pl-0" href="#">Latest
+                                                    Articles</a>
+                                                <a class="dropdown-item pl-0" href="#" id="parallax">Parallax</a>
+                                                <a class="dropdown-item pl-0" href="#">Blog
+                                                    Page</a>
+                                                <a class="dropdown-item pl-0" href="#">Full-width
+                                                    Post</a>
+                                                <a class="dropdown-item pl-0" href="#">Post with
+                                                    Sidebar</a>
+                                                <a class="dropdown-item pl-0" href="#">Big Header
+                                                    Post</a>
+                                                <a class="dropdown-item pl-0" href="#">Gallery
+                                                    Post</a>
+                                                <a class="dropdown-item pl-0" href="#">Contact
+                                                    Us</a>
+                                                <a class="dropdown-item pl-0" href="#">404
+                                                    Page</a>
+                                            </div>
+                                        </div>
+                                        <!--col-->
+
+                                        <div class="col-lg-5 d-flex justify-content-center mr-lg-0 mr-3 pr-1 pr-lg-0 
+                                                mb-3 mb-lg-0 mt-1 mt-lg-0 pagesNav2">
+                                            <div class="d-flex flex-column">
+                                                <h1 class="h6 font-weight-bold text-nowrap nav-header">Shop Pages</h1>
+                                                <a class="dropdown-item pl-0" href="#">Merchant
+                                                    Shop</a>
+                                                <a class="dropdown-item pl-0" href="#">Product
+                                                    Page</a>
+                                                <a class="dropdown-item pl-0" href="#">Variable
+                                                    Product</a>
+                                                <a class="dropdown-item pl-0" href="#">Whishlist</a>
+                                                <a class="dropdown-item pl-0" href="#">My
+                                                    Account</a>
+                                                <a class="dropdown-item pl-0" href="#">Your
+                                                    Cart</a>
+                                                <a class="dropdown-item pl-0" href="#">Checkout</a>
+                                                <a class="dropdown-item pl-0" href="#">Lost
+                                                    Password</a>
+                                            </div>
+                                        </div>
+                                        <!--col-->
+                                    </div>
+                                    <!--inner row-->
+                                </div>
+                                <!--col-->
+                            </div>
+                            <!--row-->
+                        </div>
+                        <!--dropdown menu-->
+                    </div>
+                    <!--dropdown Pages-->
+
+                    <div class="dropdown features">
+                        <a class="nav-item nav-link dropdown-toggle pl-lg-0 pl-3 text-uppercase font-weight-bold mr-lg-2"
+                            id="navbarDropdownFeatures" data-toggle="dropdown" href="#" aria-haspopup="true"
+                            aria-expanded="false">Features</a>
+
+                        <div class="dropdown-menu py-0" aria-labelledby="navbarDropdownFeatures">
+                            <div class="row no-gutters">
+                                <div class="col-lg-5 d-none d-lg-inline-block featuresCover"></div>
+                                <!--col-->
+                                <div class="col-lg-7">
+                                    <div class="row no-gutters py-lg-3 pt-lg-4">
+                                        <div class="col-lg-5 col-12 offset-lg-1 d-flex featuresNav1 justify-content-center
+                                        my-3 my-lg-0">
+                                            <div class="d-flex flex-column mr-3 mr-lg-0">
+                                                <h1 class="h6 font-weight-bold text-nowrap nav-header">Sections</h1>
+                                                <a class="dropdown-item pl-0" href="#">Look Books</a>
+                                                <a class="dropdown-item pl-0" href="#">Carousels</a>
+                                                <a class="dropdown-item pl-0" href="#">Ads</a>
+                                                <a class="dropdown-item pl-0" href="#">Parallex</a>
+                                                <a class="dropdown-item pl-0" href="#">Columns</a>
+                                                <a class="dropdown-item pl-0" href="#">Icons blocks</a>
+                                                <a class="dropdown-item pl-0" href="#">Video</a>
+                                                <a class="dropdown-item pl-0" href="#">Tabs & Toggles</a>
+                                                <a class="dropdown-item pl-0" href="#">Split Banners</a>
+                                                <a class="dropdown-item pl-0" href="#">Twitter</a>
+                                                <a class="dropdown-item pl-0" href="#">Our Team</a>
+                                                <a class="dropdown-item pl-0" href="#">Headings</a>
+                                            </div>
+
+                                        </div>
+                                        <!--col-->
+                                        <div class="col-lg-5 d-flex justify-content-center
+                                        mt-1 mt-lg-0 mb-3 mb-lg-0  featuresNav2">
+                                            <div class="d-flex flex-column ">
+                                                <h1 class="h6 font-weight-bold text-nowrap nav-header">More</h1>
+                                                <a class="dropdown-item pl-0" href="#">Page Builder</a>
+                                                <a class="dropdown-item pl-0" href="#">Icon Sets</a>
+                                                <a class="dropdown-item pl-0" href="#">Typography</a>
+                                                <a class="dropdown-item pl-0" href="#">Parallex
+                                                    Slider</a>
+                                                <a class="dropdown-item pl-0" href="#">Splash Intro</a>
+                                                <a class="dropdown-item pl-0" href="#">Gallery Post</a>
+
+                                                <h1 class="h6 font-weight-bold text-nowrap nav-header mt-4">Theme
+                                                    Support</h1>
+                                                <a class="dropdown-item pl-0" href="#">Documentation</a>
+                                                <a class="dropdown-item pl-0" href="#">Support
+                                                    Forumns</a>
+                                            </div>
+                                        </div>
+                                        <!--col-->
+                                    </div>
+                                    <!--inner row-->
+                                </div>
+                                <!--col-->
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--dropdown Features-->
+                </div>
+                <!--navbar nav-->
+            </div>
+            <!--navbar collapse-->
+            <div class="navbar-nav  flex-row order-3  mt-lg-3" id="nav-right">
+                <a class="nav-item nav-link px-2" href="#">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+
+                <a class="nav-item nav-link px-2 d-none d-lg-inline-block" data-toggle="collapse" aria-expanded="false"
+                    aria-controls="navbarSearch" href="#navbarSearch">
+                    <i class="fas fa-search"></i>
+                </a>
+                <div class="collapse" id="navbarSearch">
+                    <div id="containerSearch">
+                        <div class="d-flex flex-column" id="innerSearch">
+                            <button type="button" class="close align-self-end mr-lg-5 mt-4 mr-4" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <form class="">
+                                <div class="row no-gutters w-100">
+                                    <div class="col-8">
+                                        <input type="search" placeholder="Search Products..." aria-label="Search"
+                                            class="form-control">
+                                    </div>
+                                    <div class="col-xl-2 offset-xl-2 col-lg-3 offset-lg-1 col-md-4 col-4">
+                                        <button class="btn btn-outline-success" type="submit">Search</button>
+                                    </div>
+                                    <div class="col-12 d-flex justify-content-start">
+                                        <hr>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!--inner Search-->
+                    </div>
+                    <!--Search container-->
+                </div>
+                <!--collapse Search-->
+                <a class="nav-item nav-link px-2" data-toggle="collapse" aria-expanded="false"
+                    aria-controls="navbarProfile" href="#navbarProfile">
+                    <i class="fas fa-user-circle"></i>
+                </a>
+                <div class="collapse" id="navbarProfile">
+                    <div class="d-flex flex-column" id="innerProfile">
+                        <button type="button" class="close align-self-end mr-lg-5 mt-4 mr-4" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="row no-gutters">
+                            <div
+                                class="col-md-3 col-sm-6 col-12 mt-sm-3 mt-4  d-flex justify-content-center align-items-center pt-2 pb-3">
+                                <div class="position-relative">
+                                    <i class="far fa-user d-block text-center mb-3"></i>
+                                    <a href="#" class="text-muted text-decoration-none  stretched-link">My Account</a>
+                                    <h2 class="text-muted mt-2">Order Tracking</h2>
+                                </div>
+                            </div>
+                            <div
+                                class="col-md-3 col-sm-6 col-12 mt-sm-3 mt-4   d-flex justify-content-center align-items-center">
+                                <div class="position-relative">
+                                    <i class="far fa-heart d-block text-center mb-3"></i>
+                                    <a href="#" class="text-muted text-decoration-none  stretched-link">My Wishlist</a>
+                                    <h2 class="text-muted mt-2">Stuff I Love</h2>
+                                </div>
+                            </div>
+                            <div
+                                class="col-md-3 col-sm-6 col-12 mt-sm-3 mt-4  d-flex justify-content-center align-items-center">
+                                <div class="position-relative">
+                                    <i class="far fa-question-circle d-block text-center mb-3"></i>
+                                    <a href="#" class="text-muted text-decoration-none  stretched-link mx-5">FAQ</a>
+                                    <h2 class="text-muted mt-2">Get Answers</h2>
+                                </div>
+                            </div>
+                            <div
+                                class="col-md-3 col-sm-6 col-12 mt-sm-3 mt-4   d-flex justify-content-center align-items-center">
+                                <div class="position-relative">
+                                    <i class="far fa-envelope d-block text-center mb-3"></i>
+                                    <a href="#" class="text-muted text-decoration-none  stretched-link">Get in Touch</a>
+                                    <h2 class="text-muted mt-2">We don't bite</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--inner Profile-->
+                </div>
+                <!--collapse profile-->
+            </div>
+            <!--navbar nav right-->
+        </nav>
+    </header>
+
+    <main>
+        <div class="jumbotron mb-0 jumbotron-fluid d-flex flex-column justify-content-center align-items-start position-relative">
+            <div id="jumbotron-cover" class="d-block d-lg-none"></div>
+            <div class="ml-2 pt-sm-5 pt-2 pl-lg-5 mt-5 d-flex flex-column align-items-center align-items-lg-start justify-content-center">
+                <h1 class="font-weight-bold mt-n5 mb-1">Hanger Shop</h1>
+                <span class="d-block font-weight-light mb-1">NEW SELECTIONS</span>
+                <div class="d-flex">
+                    <a class="text-decoration-none font-weight-bold mr-2" href="#">MEN</a>
+                    <p>|</p>
+                    <a class="text-decoration-none font-weight-bold mx-2" href="#">WOMEN</a>
+                </div>
+            </div>
+
+        </div>
+        <!--jumbotron-->
+        <div class="row no-gutters">
+            <div class="col-lg-3 bg-light order-lg-first order-last pt-3">
+                <div class="row no-gutters justify-content-around d-none d-lg-flex">
+                    <div class="col-11" id="filters-container">
+                        <h1 class="h4 font-weight-bold text-uppercase mb-0 pt-2">Filter by</h1>
+                        <div class="accordion">
+                            <div class="accordion-box ">
+                                <div class="accordion-toggle">
+                                    <h3><span class="icon"></span>Price</h3>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="py-3">
+                                        <div id="slider"></div>
+                                        <div class="row my-3">
+                                            <div class="input-group col-12">
+                                                <input type="number" class="form-control" id="skip-value-lower"
+                                                    min="600" max="8000" step="10"
+                                                    aria-label="Dollar amount (with dot and two decimal places)">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text">EGP</span>
+                                                </div>
+                                            </div>
+                                            <div class="w-100 my-2"></div>
+                                            <div class="input-group col-12">
+                                                <input type="number" class="form-control" id="skip-value-upper"
+                                                    min="600" max="8000" step="10"
+                                                    aria-label="Dollar amount (with dot and two decimal places)">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text">EGP</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button class="btn rounded-0 font-weight-bold"
+                                            id="filter-Price-Btn"><span>Filter</span></button>
+                                    </div>
+                                </div>
+                                <div class="accordion-toggle">
+                                    <h3><span class="icon"></span>Size</h3>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="option-group">
+                                        <div class="option-container">
+
+                                            <input class="option-input" id="option-1" type="radio" name="options" />
+                                            <input class="option-input" id="option-2" type="radio" name="options" />
+
+                                            <label class="option" for="option-1">
+                                                <span class="option__indicator"></span>
+                                                <span class="option__label">
+                                                    <sub>S</sub>
+                                                </span>
+                                            </label>
+
+                                            <label class="option" for="option-2">
+                                                <span class="option__indicator"></span>
+                                                <span class="option__label">
+                                                    <sub>M</sub>
+                                                </span>
+                                            </label>
+
+                                        </div>
+                                    </div>
+                                    <div class="option-group">
+                                        <div class="option-container">
+
+                                            <input class="option-input" id="option-3" type="radio" name="options" />
+                                            <input class="option-input" id="option-4" type="radio" name="options" />
+
+                                            <label class="option" for="option-3">
+                                                <span class="option__indicator"></span>
+                                                <span class="option__label">
+                                                    <sub>L</sub>
+                                                </span>
+                                            </label>
+
+                                            <label class="option" for="option-4">
+                                                <span class="option__indicator"></span>
+                                                <span class="option__label">
+                                                    <sub>XL</sub>
+                                                </span>
+                                            </label>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-toggle">
+                                    <h3><span class="icon"></span>Color</h3>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="row no-gutters">
+                                        <div class="col-6">
+                                            <div class="custom-radios d-flex flex-column">
+                                                <div>
+                                                    <input type="radio" id="color-1" name="color" value="color-1">
+                                                    <label for="color-1">
+                                                        <span>
+                                                            <img src="./images/check-icn.svg" alt="Checked Icon" />
+                                                        </span>
+                                                        Green
+                                                    </label>
+                                                </div>
+
+                                                <div>
+                                                    <input type="radio" id="color-2" name="color" value="color-2">
+                                                    <label for="color-2">
+                                                        <span>
+                                                            <img src="./images/check-icn.svg" alt="Checked Icon" />
+                                                        </span>
+                                                        Blue
+                                                    </label>
+                                                </div>
+
+                                                <div>
+                                                    <input type="radio" id="color-3" name="color" value="color-3">
+                                                    <label for="color-3">
+                                                        <span>
+                                                            <img src="./images/check-icn.svg" alt="Checked Icon" />
+                                                        </span>
+                                                        Yellow
+                                                    </label>
+                                                </div>
+
+                                                <div>
+                                                    <input type="radio" id="color-4" name="color" value="color-4">
+                                                    <label for="color-4">
+                                                        <span>
+                                                            <img src="./images/check-icn.svg" alt="Checked Icon" />
+                                                        </span>
+                                                        Red
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="custom-radios d-flex flex-column">
+                                                <div>
+                                                    <input type="radio" id="color-5" name="color" value="color-5">
+                                                    <label for="color-5">
+                                                        <span>
+                                                            <img src="./images/check-icn.svg" alt="Checked Icon" />
+                                                        </span>
+                                                        Black
+                                                    </label>
+                                                </div>
+
+                                                <div>
+                                                    <input type="radio" id="color-6" name="color" value="color-6">
+                                                    <label for="color-6">
+                                                        <span>
+                                                            <img src="./images/check-icn.svg" alt="Checked Icon" />
+                                                        </span>
+                                                        Grey
+                                                    </label>
+                                                </div>
+
+                                                <div>
+                                                    <input type="radio" id="color-7" name="color" value="color-7">
+                                                    <label for="color-7">
+                                                        <span>
+                                                            <img src="./images/check-icn-black.svg"
+                                                                alt="Checked Icon" />
+                                                        </span>
+                                                        White
+                                                    </label>
+                                                </div>
+
+                                                <div>
+                                                    <input type="radio" id="color-8" name="color" value="color-8">
+                                                    <label for="color-8">
+                                                        <span>
+                                                            <img src="./images/check-icn.svg" alt="Checked Icon" />
+                                                        </span>
+                                                        Brown
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-toggle">
+                                    <h3><span class="icon"></span>Brand</h3>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="inputGroup">
+                                        <input id="option1" name="option1" type="checkbox" />
+                                        <label for="option1">Levi's</label>
+                                    </div>
+
+                                    <div class="inputGroup">
+                                        <input id="option2" name="option2" type="checkbox" />
+                                        <label for="option2">Merch</label>
+                                    </div>
+
+                                    <div class="inputGroup">
+                                        <input id="option3" name="option3" type="checkbox" />
+                                        <label for="option3">Adidas</label>
+                                    </div>
+
+                                    <div class="inputGroup">
+                                        <input id="option4" name="option4" type="checkbox" />
+                                        <label for="option4">Reebok</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--accordion-->
+                    </div>
+                    <!--col-->
+                </div>
+                <!--row-->
+                <div class="row no-gutters related-products justify-content-around pt-3">
+                    <div class="col-lg-12 col-xl-10 col-md-4 px-3">
+                        <h2 class="text-nowrap">Featured Products</h2>
+                        <ul class="list-unstyled pt-2">
+                            <li class="media pb-2">
+                                <a href="#">
+                                    <img class="img-fluid align-self-center"
+                                        src="./images/vintage-camel-topcoat-primary.jpeg" alt="">
+                                </a>
+                                <div class="media-body d-flex flex-column justify-content-between ml-1">
+                                    <a href="#" class="my-0 h6 text-nowrap text-reset text-decoration-none">Topcoat in
+                                        wool</a>
+
+                                    <p class="text-nowrap mb-0 mt-4"><span class="font-weight-bold">EGP 7402.30</span>
+                                    </p>
+                                </div>
+                                <!--media body-->
+                            </li>
+                            <!--item-->
+                            <li class="media py-2 border-top border-bottom">
+                                <a href="#">
+                                    <img class="img-fluid align-self-center"
+                                        src="./images/navy-women-jacket-secondary.jpeg" alt="">
+                                </a>
+                                <div class="media-body d-flex flex-column justify-content-around ml-1">
+                                    <a href="#" class="my-0 h6 text-nowrap text-decoration-none text-reset">Peacoat in
+                                        wool</a>
+
+                                    <p class="text-nowrap mb-0 mt-4">
+                                        <span class="font-weight-bold">EGP 4902.00</span></p>
+                                </div>
+                                <!--media body-->
+                            </li>
+                            <!--item-->
+                            <li class="media pt-2">
+                                <a href="#">
+                                    <img class="img-fluid align-self-center" src="./images/cape-sunglasses-primary.jpeg"
+                                        alt="">
+                                </a>
+                                <div class="media-body d-flex flex-column justify-content-between ml-1">
+                                    <a href="#" class="my-0 h6 text-nowrap text-reset text-decoration-none">Cape
+                                        sunglasses</a>
+
+                                    <p class="text-nowrap mb-0 mt-4"><span class="font-weight-bold">EGP 1067.50</span>
+                                    </p>
+                                </div>
+                                <!--media body-->
+                            </li>
+                            <!--item-->
+                        </ul>
+                        <!--list of items-->
+                    </div>
+                    <!--col inner-->
+                    <div class="col-lg-12 col-xl-10 col-md-4 px-3">
+                        <h2 class="text-nowrap">Top Rated Products</h2>
+                        <ul class="list-unstyled pt-2">
+                            <li class="media pb-2">
+                                <a href="#">
+                                    <img class="img-fluid align-self-center"
+                                        src="./images/rugby-crewneck-shirt-primary.jpeg" alt="">
+                                </a>
+                                <div class="media-body d-flex flex-column justify-content-around ml-1">
+                                    <a href="#" class="my-0 h6 text-nowrap text-decoration-none text-reset">Rugby
+                                        crewneck shirt</a>
+                                    <ul class="list-unstyled flex-row border-0 mt-2">
+                                        <i class="fas fa-star p-0 text-danger"></i><i
+                                            class="fas fa-star p-0 text-danger"></i><i
+                                            class="fas fa-star p-0 text-danger"></i><i
+                                            class="fas fa-star p-0 text-danger"></i><i
+                                            class="fas fa-star p-0 text-danger"></i>
+                                    </ul>
+                                    <p class="text-nowrap mb-0"><del class="text-muted font-weight-bold">EGP
+                                            1141.40</del>
+                                        <span class="text-danger font-weight-bold">EGP 919.50</span></p>
+                                </div>
+                                <!--media body-->
+                            </li>
+                            <!--item-->
+                            <li class="media py-2 border-top border-bottom">
+                                <a href="#">
+                                    <img class="img-fluid align-self-center"
+                                        src="./images/v-neck-wide-leg-velvet-jumpsuit-primary.jpeg" alt="">
+                                </a>
+                                <div class="media-body d-flex flex-column justify-content-between ml-1">
+                                    <a href="#" class="my-0 h6 text-nowrap text-reset text-decoration-none">V-neck
+                                        velvet jumpsuit</a>
+                                    <ul class="list-unstyled flex-row border-0 mt-2">
+                                        <i class="fas fa-star p-0 text-danger"></i><i
+                                            class="fas fa-star p-0 text-danger"></i><i
+                                            class="fas fa-star p-0 text-danger"></i><i
+                                            class="fas fa-star p-0 text-danger"></i><i
+                                            class="fas fa-star p-0 text-danger"></i>
+                                    </ul>
+                                    <p class="text-nowrap mb-0"><span class="font-weight-bold">EGP 2430.50</span></p>
+                                </div>
+                                <!--media body-->
+                            </li>
+                            <!--item-->
+                            <li class="media pt-2">
+                                <a href="#">
+                                    <img class="img-fluid align-self-center"
+                                        src="./images/ribbed-beanie-with-faux-fur-primary.jpeg" alt="">
+                                </a>
+                                <div class="media-body d-flex flex-column justify-content-between ml-1">
+                                    <a href="#" class="my-0 h6 text-nowrap text-reset text-decoration-none">Ribbed
+                                        beanie</a>
+                                    <ul class="list-unstyled flex-row border-0 mt-2">
+                                        <i class="fas fa-star p-0 text-danger"></i><i
+                                            class="fas fa-star p-0 text-danger"></i><i
+                                            class="fas fa-star p-0 text-danger"></i><i
+                                            class="fas fa-star p-0 text-danger"></i><i
+                                            class="fas fa-star p-0 text-danger"></i>
+                                    </ul>
+                                    <p class="text-nowrap mb-0"><span class="font-weight-bold">EGP 739.00</span></p>
+                                </div>
+                                <!--media body-->
+                            </li>
+                            <!--item-->
+                        </ul>
+                        <!--list of items-->
+                    </div>
+                    <!--col inner-->
+                    <div class="col-lg-12 col-xl-10 col-md-4 px-3">
+                        <h2>On Sale Now!</h2>
+                        <ul class="list-unstyled pt-2">
+                            <li class="media pb-2">
+                                <a href="#">
+                                    <img class="img-fluid align-self-center"
+                                        src="./images/band-collar-tunic-primary.jpeg" alt="">
+                                </a>
+                                <div class="media-body d-flex flex-column justify-content-between ml-1">
+                                    <a href="#" class="my-0 h6 text-nowrap text-reset text-decoration-none">Band-collar
+                                        tunic</a>
+
+                                    <p class="text-nowrap mb-0 mt-4"><del class="text-muted font-weight-bold">EGP
+                                            1141.40</del> <span class="text-danger font-weight-bold">EGP 919.50</span>
+                                    </p>
+                                </div>
+                                <!--media body-->
+                            </li>
+                            <!--item-->
+                            <li class="media py-2 border-top border-bottom">
+                                <a href="#">
+                                    <img class="img-fluid align-self-center"
+                                        src="./images/rugby-crewneck-shirt-primary.jpeg" alt="">
+                                </a>
+                                <div class="media-body d-flex flex-column justify-content-around ml-1">
+                                    <a href="#" class="my-0 h6 text-nowrap text-reset text-decoration-none">Rugby
+                                        crewneck
+                                        shirt</a>
+                                    <ul class="list-unstyled flex-row border-0 mt-2">
+                                        <i class="fas fa-star p-0 text-danger"></i><i
+                                            class="fas fa-star p-0 text-danger"></i><i
+                                            class="fas fa-star p-0 text-danger"></i><i
+                                            class="fas fa-star p-0 text-danger"></i><i
+                                            class="fas fa-star p-0 text-danger"></i>
+                                    </ul>
+                                    <p class="text-nowrap mb-0"><del class="text-muted font-weight-bold">EGP
+                                            1141.40</del>
+                                        <span class="text-danger font-weight-bold">EGP 919.50</span></p>
+                                </div>
+                                <!--media body-->
+                            </li>
+                            <!--item-->
+                            <li class="media pt-2">
+                                <a href="#">
+                                    <img class="img-fluid align-self-center"
+                                        src="./images/striped-long-sleeve-t-shirt-primary.jpeg" alt="">
+                                </a>
+                                <div class="media-body d-flex flex-column justify-content-between ml-1">
+                                    <a href="#" class="my-0 h6 text-nowrap text-reset text-decoration-none">Striped
+                                        T-shirt</a>
+
+                                    <p class="text-nowrap mb-0 mt-4"><del class="text-muted font-weight-bold">EGP
+                                            648.70</del> <span class="text-danger font-weight-bold">EGP 591.00</span>
+                                    </p>
+                                </div>
+                                <!--media body-->
+                            </li>
+                            <!--item-->
+                        </ul>
+                        <!--list of items-->
+                    </div>
+                    <!--col inner-->
+                </div>
+                <!--related products-->
+            </div>
+            <!--col-->
+
+
+            <div class="col-lg-9 order-first order-lg-last pt-3">
+                <div class="row no-gutters px-2 pt-0">
+                    <div class="col-12">
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex ml-2">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle font-weight-bold h-100" type="button"
+                                        id="dropdownSort" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Sort <span><i class="fas fa-exchange-alt"
+                                                style="transform: rotate(90deg);"></i></span>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownSort">
+                                        <a class="dropdown-item" href="#">Category</a>
+                                        <a class="dropdown-item" href="#">Price: Low to High</a>
+                                        <a class="dropdown-item" href="#">Price: High to Low</a>
+                                        <a class="dropdown-item" href="#">New Arrival</a>
+                                        <a class="dropdown-item" href="#">Top Rated</a>
+                                    </div>
+                                </div>
+                                <p class=" m-0 py-2 d-lg-none">|</p>
+                                <button class="btn font-weight-bold d-lg-none" id="filters-collapse-btn" type="button"
+                                    aria-expanded="false">
+                                    Filter <span><i class="fas fa-sliders-h"></i></span>
+                                </button>
+                            </div>
+
+                            <p id="shop-results" class="pr-2 m-0 text-muted pt-2">Showing all 14 results</p>
+                        </div>
+                        <div id="filters-collapse" class="bg-light mx-2" style="display: none;">
+                            <div class="row no-gutters">
+                                <div class="accordion offset-md-3 col-md-6 col-sm-8 offset-sm-2">
+                                    <div class="accordion-box">
+                                        <div class="accordion-toggle">
+                                            <h3><span class="icon"></span>Price</h3>
+                                        </div>
+                                        <div class="accordion-content ">
+                                            <div class="py-3">
+                                                <div id="slider-clone"></div>
+                                                <div class="row my-3">
+                                                    <div class="input-group col-12">
+                                                        <input type="number" class="form-control"
+                                                            id="skip-value-lower-clone" min="600" max="8000" step="10"
+                                                            aria-label="Dollar amount (with dot and two decimal places)">
+                                                        <div class="input-group-append">
+                                                            <span class="input-group-text">EGP</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="w-100 my-2"></div>
+                                                    <div class="input-group col-12">
+                                                        <input type="number" class="form-control"
+                                                            id="skip-value-upper-clone" min="600" max="8000" step="10"
+                                                            aria-label="Dollar amount (with dot and two decimal places)">
+                                                        <div class="input-group-append">
+                                                            <span class="input-group-text">EGP</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <button class="btn rounded-0 font-weight-bold"
+                                                    id="filter-Price-Btn-clone"><span>Filter</span></button>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-toggle">
+                                            <h3><span class="icon"></span>Size</h3>
+                                        </div>
+                                        <div class="accordion-content ">
+                                            <div class="option-group">
+                                                <div class="option-container">
+
+                                                    <input class="option-input" id="option-1-clone" type="radio"
+                                                        name="options-clone" />
+                                                    <input class="option-input" id="option-2-clone" type="radio"
+                                                        name="options-clone" />
+
+                                                    <label class="option" for="option-1-clone">
+                                                        <span class="option__indicator"></span>
+                                                        <span class="option__label">
+                                                            <sub>S</sub>
+                                                        </span>
+                                                    </label>
+
+                                                    <label class="option" for="option-2-clone">
+                                                        <span class="option__indicator"></span>
+                                                        <span class="option__label">
+                                                            <sub>M</sub>
+                                                        </span>
+                                                    </label>
+
+                                                </div>
+                                            </div>
+                                            <div class="option-group">
+                                                <div class="option-container">
+
+                                                    <input class="option-input" id="option-3-clone" type="radio"
+                                                        name="options-clone" />
+                                                    <input class="option-input" id="option-4-clone" type="radio"
+                                                        name="options-clone" />
+
+                                                    <label class="option" for="option-3-clone">
+                                                        <span class="option__indicator"></span>
+                                                        <span class="option__label">
+                                                            <sub>L</sub>
+                                                        </span>
+                                                    </label>
+
+                                                    <label class="option" for="option-4-clone">
+                                                        <span class="option__indicator"></span>
+                                                        <span class="option__label">
+                                                            <sub>XL</sub>
+                                                        </span>
+                                                    </label>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-toggle">
+                                            <h3><span class="icon"></span>Color</h3>
+                                        </div>
+                                        <div class="accordion-content ">
+                                            <div class="row no-gutters">
+                                                <div class="col-6">
+                                                    <div class="custom-radios d-flex flex-column">
+                                                        <div class="ml-4">
+                                                            <input type="radio" id="color-1-clone" name="color"
+                                                                value="color-1-clone">
+                                                            <label for="color-1-clone">
+                                                                <span>
+                                                                    <img src="./images/check-icn.svg"
+                                                                        alt="Checked Icon" />
+                                                                </span>
+                                                                Green
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="ml-4">
+                                                            <input type="radio" id="color-2-clone" name="color"
+                                                                value="color-2-clone">
+                                                            <label for="color-2-clone">
+                                                                <span>
+                                                                    <img src="./images/check-icn.svg"
+                                                                        alt="Checked Icon" />
+                                                                </span>
+                                                                Blue
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="ml-4">
+                                                            <input type="radio" id="color-3-clone" name="color"
+                                                                value="color-3-clone">
+                                                            <label for="color-3-clone">
+                                                                <span>
+                                                                    <img src="./images/check-icn.svg"
+                                                                        alt="Checked Icon" />
+                                                                </span>
+                                                                Yellow
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="ml-4">
+                                                            <input type="radio" id="color-4-clone" name="color"
+                                                                value="color-4-clone">
+                                                            <label for="color-4-clone">
+                                                                <span>
+                                                                    <img src="./images/check-icn.svg"
+                                                                        alt="Checked Icon" />
+                                                                </span>
+                                                                Red
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="custom-radios d-flex flex-column">
+                                                        <div class="ml-4">
+                                                            <input type="radio" id="color-5-clone" name="color"
+                                                                value="color-5-clone">
+                                                            <label for="color-5-clone">
+                                                                <span>
+                                                                    <img src="./images/check-icn.svg"
+                                                                        alt="Checked Icon" />
+                                                                </span>
+                                                                Black
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="ml-4">
+                                                            <input type="radio" id="color-6-clone" name="color"
+                                                                value="color-6-clone">
+                                                            <label for="color-6-clone">
+                                                                <span>
+                                                                    <img src="./images/check-icn.svg"
+                                                                        alt="Checked Icon" />
+                                                                </span>
+                                                                Grey
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="ml-4">
+                                                            <input type="radio" id="color-7-clone" name="color"
+                                                                value="color-7-clone">
+                                                            <label for="color-7-clone">
+                                                                <span>
+                                                                    <img src="./images/check-icn-black.svg"
+                                                                        alt="Checked Icon" />
+                                                                </span>
+                                                                White
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="ml-4">
+                                                            <input type="radio" id="color-8-clone" name="color"
+                                                                value="color-8-clone">
+                                                            <label for="color-8-clone">
+                                                                <span>
+                                                                    <img src="./images/check-icn.svg"
+                                                                        alt="Checked Icon" />
+                                                                </span>
+                                                                Brown
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-toggle">
+                                            <h3><span class="icon"></span>Brand</h3>
+                                        </div>
+                                        <div class="accordion-content ">
+                                            <div class="inputGroup">
+                                                <input id="option1-clone" name="option1-clone" type="checkbox" />
+                                                <label for="option1-clone">Levi's</label>
+                                            </div>
+
+                                            <div class="inputGroup">
+                                                <input id="option2-clone" name="option2-clone" type="checkbox" />
+                                                <label for="option2-clone">Merch</label>
+                                            </div>
+
+                                            <div class="inputGroup">
+                                                <input id="option3-clone" name="option3-clone" type="checkbox" />
+                                                <label for="option3-clone">Adidas</label>
+                                            </div>
+
+                                            <div class="inputGroup">
+                                                <input id="option4-clone" name="option4-clone" type="checkbox" />
+                                                <label for="option4-clone">Reebok</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--accordion-->
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--col-->
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 p-2">
+                        <div class="card rounded-0 border-0 ">
+                            <div class="img-container">
+                                <img src="./images/blue-women-coat-secondary.jpeg" class="card-img-bottom" alt="">
+                                <img src="./images/blue-women-coat-primary.jpeg" class="card-img-top" alt="">
+                                <a href="#"
+                                    class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
+                                    View</a>
+                            </div>
+                            <div class="card-body px-1 d-flex flex-column justify-content-start p-1">
+                                <h5 class="card-title">Daphne topcoat in tweed</h5>
+                                <h6 class="h6 text-center font-weight-bold">EGP 5342.40</h6>
+                                <button class="btn btn-outline-success align-self-center">select
+                                    options</button>
+                            </div>
+                        </div>
+                        <!--card-->
+                    </div>
+                    <!--col-->
+                    <div class="col-lg-3 col-md-4 col-sm-6 p-2">
+                        <div class="card rounded-0 border-0 ">
+                            <div class="img-container">
+                                <img src="./images/biscuit-women-jacket-secondary.jpeg" class="card-img-bottom" alt="">
+                                <img src="./images/biscuit-women-jacket-primary.jpeg" class="card-img-top" alt="">
+                                <a href="#"
+                                    class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
+                                    View</a>
+                            </div>
+
+                            <div class="card-body px-1 d-flex flex-column justify-content-start p-1">
+                                <h5 class="card-title">Daphne topcoat in wool</h5>
+                                <h6 class="h6 text-center font-weight-bold">EGP 5346.10</h6>
+                                <button class="btn btn-outline-success align-self-center">select
+                                    options</button>
+                            </div>
+                        </div>
+                        <!--card-->
+                    </div>
+                    <!--col-->
+                    <div class="col-lg-3 col-md-4 col-sm-6 p-2">
+                        <div class="card rounded-0 border-0 ">
+                            <div class="img-container">
+                                <img src="./images/navy-women-jacket-secondary.jpeg" class="card-img-bottom" alt="">
+                                <img src="./images/navy-women-jacket-primary.jpeg" class="card-img-top" alt="">
+                                <a href="#"
+                                    class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
+                                    View</a>
+                            </div>
+
+                            <div class="card-body px-1 d-flex flex-column justify-content-start p-1">
+                                <h5 class="card-title">Peacoat in wool</h5>
+                                <h6 class="h6 text-center font-weight-bold">EGP 4902.00</h6>
+                                <button class="btn btn-outline-success align-self-center">select
+                                    options</button>
+                            </div>
+                        </div>
+                        <!--card-->
+                    </div>
+                    <!--card-->
+                    <div class="col-lg-3 col-md-4 col-sm-6 p-2">
+                        <div class="card rounded-0 border-0 ">
+                            <div class="img-container">
+                                <img src="./images/berry-women-jacket-secondary.jpeg" class="card-img-bottom" alt="">
+                                <img src="./images/berry-women-jacket-primary.jpeg" class="card-img-top" alt="">
+                                <a href="#"
+                                    class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
+                                    View</a>
+                            </div>
+
+                            <div class="card-body px-1 d-flex flex-column justify-content-start p-1">
+                                <h5 class="card-title">Swing coat in wool</h5>
+                                <h6 class="h6 text-center font-weight-bold">EGP 5757.40</h6>
+                                <button class="btn btn-outline-success align-self-center">select
+                                    options</button>
+                            </div>
+                        </div>
+                        <!--card-->
+                    </div>
+                    <!--col-->
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 p-2">
+                        <div class="card rounded-0 border-0">
+                            <div class="img-container position-relative">
+                                <img src="./images/vintage-camel-topcoat-secondary.jpeg" class="card-img-bottom" alt="">
+                                <img src="./images/vintage-camel-topcoat-primary.jpeg" class="card-img-top" alt="">
+                                <a href="product.html" class="stretched-link"></a>
+                                <a href="shop.html"
+                                    class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
+                                    View</a>
+                            </div>
+                            <div class="card-body px-1 d-flex flex-column justify-content-start p-1">
+                                <h5 class="card-title">Topcoat in wool-cashmere</h5>
+                                <h6 class="h6 text-center font-weight-bold">EGP 7402.30</h6>
+                                <button class="btn btn-outline-success align-self-center">select
+                                    options</button>
+                            </div>
+                        </div>
+                        <!--card-->
+                    </div>
+                    <!--col-->
+                    <div class="col-lg-3 col-md-4 col-sm-6 p-2">
+                        <div class="card rounded-0 border-0">
+                            <div class="img-container">
+                                <img src="./images/bomber-navy-jacket-secondary.jpeg" class="card-img-bottom" alt="">
+                                <img src="./images/bomber-navy-jacket-primary.jpeg" class="card-img-top" alt="">
+                                <a href="#"
+                                    class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
+                                    View</a>
+                            </div>
+
+                            <div class="card-body px-1 d-flex flex-column justify-content-start p-1">
+                                <h5 class="card-title">Bomber jacket in wool-blend</h5>
+                                <h6 class="h6 text-center font-weight-bold">EGP 3750.50</h6>
+                                <button class="btn btn-outline-success align-self-center">select
+                                    options</button>
+                            </div>
+                        </div>
+                        <!--card-->
+                    </div>
+                    <!--col-->
+                    <div class="col-lg-3 col-md-4 col-sm-6 p-2">
+                        <div class="card rounded-0 border-0">
+                            <div class="img-container">
+                                <img src="./images/dusty-khaki-jacket-secondary.jpeg" class="card-img-bottom" alt="">
+                                <img src="./images/dusty-khaki-jacket-primary.jpeg" class="card-img-top" alt="">
+                                <a href="#"
+                                    class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
+                                    View</a>
+                            </div>
+
+                            <div class="card-body px-1 d-flex flex-column justify-content-start p-1">
+                                <h5 class="card-title">Harrington jacket</h5>
+                                <h6 class="h6 text-center font-weight-bold">EGP 2928.00</h6>
+                                <button class="btn btn-outline-success align-self-center">select
+                                    options</button>
+                            </div>
+                        </div>
+                        <!--card-->
+                    </div>
+                    <!--card-->
+                    <div class="col-lg-3 col-md-4 col-sm-6 p-2">
+                        <div class="card rounded-0 border-0">
+                            <div class="img-container">
+                                <img src="./images/faded-navy-jacket-secondary.jpeg" class="card-img-bottom" alt="">
+                                <img src="./images/faded-navy-jacket-primary.jpeg" class="card-img-top" alt="">
+                                <a href="#"
+                                    class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
+                                    View</a>
+
+                            </div>
+
+                            <div class="card-body px-1 d-flex flex-column justify-content-start p-1">
+                                <h5 class="card-title">Box quilted Jacket</h5>
+                                <h6 class="h6 text-center font-weight-bold">EGP 3257.00</h6>
+                                <button class="btn btn-outline-success align-self-center">select
+                                    options</button>
+                            </div>
+                        </div>
+                        <!--card-->
+                    </div>
+                    <!--col-->
+                    <div class="col-lg-3 col-md-4 col-sm-6 p-2">
+                        <div class="card rounded-0 border-0">
+                            <div class="img-container">
+                                <img src="./images/v-neck-wide-leg-velvet-jumpsuit-secondary.jpeg"
+                                    class="card-img-bottom" alt="">
+                                <img src="./images/v-neck-wide-leg-velvet-jumpsuit-primary.jpeg" class="card-img-top"
+                                    alt="">
+                                <a href="#"
+                                    class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
+                                    View</a>
+
+                            </div>
+
+                            <div class="card-body px-1 d-flex flex-column justify-content-start p-1">
+                                <h5 class="card-title">V-neck velvet jumpsuit</h5>
+                                <h6 class="h6 text-center font-weight-bold">EGP 2435.70</h6>
+                                <button class="btn btn-outline-success align-self-center">select
+                                    options</button>
+                            </div>
+                        </div>
+                        <!--card-->
+                    </div>
+                    <!--col-->
+                    <div class="col-lg-3 col-md-4 col-sm-6 p-2">
+                        <div class="card rounded-0 border-0">
+                            <div class="img-container">
+                                <img src="./images/striped-long-sleeve-t-shirt-secondary.jpeg" class="card-img-bottom"
+                                    alt="">
+                                <img src="./images/striped-long-sleeve-t-shirt-primary.jpeg" class="card-img-top"
+                                    alt="">
+                                <a href="#"
+                                    class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
+                                    View</a>
+
+                            </div>
+
+                            <div class="card-body px-1 d-flex flex-column justify-content-start p-1">
+                                <h5 class="card-title">Striped T-shirt </h5>
+                                <h6 class="h6 text-center font-weight-bold"><del class="text-muted text-nowrap">EGP
+                                        650.10</del> <span class="text-danger text-nowrap">EGP 592.30</span></h6>
+                                <button class="btn btn-outline-success align-self-center">select
+                                    options</button>
+                            </div>
+                        </div>
+                        <!--card-->
+                    </div>
+                    <!--col-->
+                    <div class="col-lg-3 col-md-4 col-sm-6 p-2">
+                        <div class="card rounded-0 border-0">
+                            <div class="img-container">
+                                <img src="./images/rugby-crewneck-shirt-secondary.jpeg" class="card-img-bottom" alt="">
+                                <img src="./images/rugby-crewneck-shirt-primary.jpeg" class="card-img-top" alt="">
+                                <a href="#"
+                                    class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
+                                    View</a>
+
+                            </div>
+
+                            <div class="card-body px-1 d-flex flex-column justify-content-start p-1">
+                                <h5 class="card-title">Rugby crewneck shirt</h5>
+                                <h6 class="h6 text-center font-weight-bold"><del class="text-muted text-nowrap">EGP
+                                        1143.80</del> <span class="text-danger text-nowrap">EGP 921.40</span></h6>
+                                <button class="btn btn-outline-success align-self-center">select
+                                    options</button>
+                            </div>
+                        </div>
+                        <!--card-->
+                    </div>
+                    <!--col-->
+                    <div class="col-lg-3 col-md-4 col-sm-6 p-2">
+                        <div class="card rounded-0 border-0">
+                            <div class="img-container">
+                                <img src="./images/band-collar-tunic-secondary.jpeg" class="card-img-bottom" alt="">
+                                <img src="./images/band-collar-tunic-primary.jpeg" class="card-img-top" alt="">
+                                <a href="#"
+                                    class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
+                                    View</a>
+
+                            </div>
+
+                            <div class="card-body px-1 d-flex flex-column justify-content-start p-1">
+                                <h5 class="card-title">Band-collar tunic</h5>
+                                <h6 class="h6 text-center font-weight-bold"><del class="text-muted text-nowrap">EGP
+                                        1472.90</del> <span class="text-danger text-nowrap">EGP 1332.90</span></h6>
+                                <button class="btn btn-outline-success align-self-center">select
+                                    options</button>
+                            </div>
+                        </div>
+                        <!--card-->
+                    </div>
+                    <!--col-->
+                    <div class="col-lg-3 col-md-4 col-sm-6 p-2">
+                        <div class="card rounded-0 border-0">
+                            <div class="img-container">
+                                <img src="./images/cape-sunglasses-secondary.jpeg" class="card-img-bottom" alt="">
+                                <img src="./images/cape-sunglasses-primary.jpeg" class="card-img-top" alt="">
+                                <a href="#"
+                                    class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
+                                    View</a>
+
+                            </div>
+
+                            <div class="card-body px-1 d-flex flex-column justify-content-start p-1">
+                                <h5 class="card-title">Cape sunglasses</h5>
+                                <h6 class="h6 text-center font-weight-bold">EGP 1069.70</h6>
+                                <button class="btn btn-outline-success align-self-center">select
+                                    options</button>
+                            </div>
+                        </div>
+                        <!--card-->
+                    </div>
+                    <!--col-->
+                    <div class="col-lg-3 col-md-4 col-sm-6 p-2">
+                        <div class="card rounded-0 border-0">
+                            <div class="img-container">
+                                <img src="./images/ribbed-beanie-with-faux-fur-secondary.jpeg" class="card-img-bottom"
+                                    alt="">
+                                <img src="./images/ribbed-beanie-with-faux-fur-primary.jpeg" class="card-img-top"
+                                    alt="">
+                                <a href="#"
+                                    class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
+                                    View</a>
+
+                            </div>
+
+                            <div class="card-body px-1 d-flex flex-column justify-content-start p-1">
+                                <h5 class="card-title">Ribbed beanie faux-fur</h5>
+                                <h6 class="h6 text-center font-weight-bold">EGP 740.60</h6>
+                                <button class="btn btn-outline-success align-self-center">select
+                                    options</button>
+                            </div>
+                        </div>
+                        <!--card-->
+                    </div>
+                    <!--col-->
+                </div>
+                <!--row-->
+            </div>
+            <!--col-->
+
+
+
+        </div>
+        <!--main row-->
+    </main>
+
+    <footer class="p-5">
+        <div class="container py-4 d-flex flex-column justify-content-center align-items-center">
+            <div class="d-flex ">
+                <a class="px-0 mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="px-0 mx-1" href=""><i class="fab fa-twitter"></i></a>
+                <a class="px-0 mx-1" href=""><i class="fab fa-instagram"></i></a>
+                <a class="px-0 mx-1" href=""><i class="fab fa-pinterest"></i></a>
+                <a class="px-0 mx-1" href=""><i class="fab fa-vimeo-square"></i></a>
+                <a class="px-0 mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="px-0 mx-1" href=""><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="d-flex flex-sm-row flex-column my-2" id="links">
+                <a class="px-0 mx-1 text-center mb-1" href="#">MY ACCOUNT</a>
+                <P class="m-0 d-none d-sm-inline-block">|</P>
+                <a class="px-0 mx-1 text-center mb-1" href="#">MY WHISHLIST</a>
+                <P class="m-0 d-none d-sm-inline-block">|</P>
+                <a class="px-0 mx-1 text-center mb-1" href="#">SUMMER CATALOG</a>
+                <P class="m-0 d-none d-sm-inline-block">|</P>
+                <a class="px-0 mx-1 text-center mb-1" href="#">CONTACT US</a>
+            </div>
+            <div>
+                <p class="m-0">All Rights Reserved. Hanger</p>
+            </div>
+            <a href="#" id="pageTop"><i class="fas fa-chevron-up"></i></a>
+        </div>
+    </footer>
+    <!-------------------------------JS------------------------------------------>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/nouislider.min.js"></script>
+
+    <script src="./js/script.js"></script>
+    <!-------------------------------JS------------------------------------------>
+</body>
+
+</html>
