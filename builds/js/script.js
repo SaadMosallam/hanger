@@ -25,12 +25,20 @@ $(document).ready(function () {
         if (screenWidth < 992) {
             //set the height of the navbar collapse equal to the height of the document
             $('#navbarNavCollapse').css({
-                height: screenHeight - $('nav').outerHeight()
+                height: screenHeight - 61
             });
             //adding slide animation up/down when clicking on dropdown toggle
             $('.navbar-collapse').click(function (e) {
-                // e.stopPropagation();
+                // console.log(e.target.className);
+                if( e.target.id == "navbarNavCollapse" ){
+                    $('#navbarNavCollapse').collapse('hide');
+                }
             });
+            //dropdown does not close when you click outside links
+            $(document).on('click', '.collapse .dropdown-menu', function (e) {
+                e.stopPropagation();
+            });
+
             $('nav .dropdown').on('show.bs.dropdown', function () {
                 // console.log('dropdown show');
                 $(this).children('.dropdown-menu').animate({
@@ -51,6 +59,7 @@ $(document).ready(function () {
         $('#navbarNavCollapse').on('show.bs.collapse', function (e) {
             e.preventDefault();
             $(this).addClass('show');
+            $('body').addClass('modal-open');
 
             function run(v) {
 
@@ -58,7 +67,10 @@ $(document).ready(function () {
                     duration: 500,
                     step: function (val) {
                         //Adding the transform to your element
-                        $('#navbarNavCollapse').css("transform", `translateX(${val}px)`);
+                        $('#navbarNavCollapse').css({
+                            "transform":`translateX(${val}px)`,
+                            "opacity": `${ 1 - (((val/5)*(-1))/100)}`
+                        });
                     }
                 });
             }
@@ -68,19 +80,11 @@ $(document).ready(function () {
             }, {
                 y: 0
             }]);
-            //close the collapse when clicking on the main or footer content
-            $('main').on("click", function () {
-                // console.log(this);
-                $('#navbarNavCollapse').collapse('hide');
-            });
-            $('footer').on("click", function () {
-                // console.log(this);
-                $('#navbarNavCollapse').collapse('hide');
-            });
         });
 
         $('#navbarNavCollapse').on('hide.bs.collapse', function (e) {
             e.preventDefault();
+            $('body').removeClass('modal-open');
 
             function run(v) {
 
@@ -88,7 +92,10 @@ $(document).ready(function () {
                     duration: 500,
                     step: function (val) {
                         //Adding the transform to your element
-                        $('#navbarNavCollapse').css("transform", `translateX(${val}px)`);
+                        $('#navbarNavCollapse').css({
+                            "transform":`translateX(${val}px)`,
+                            "opacity": `${ 1 - (((val/5)*(-1))/100)}`
+                        });
                     },
                     done: function () {
                         $('#navbarNavCollapse').removeClass('show');
@@ -137,17 +144,8 @@ $(document).ready(function () {
             });
     });
     //--------------------------------- navbar right collapse Profile --------------------------------------//
-    $('#navbarProfile').on('show.bs.collapse', function () {
-        $(this).children().animate({
-            height: "100%"
-        }, 300);
-    });
-    $('#navbarProfile .close').click(function () {
-        $('#innerProfile').animate({
-            height: "0%"
-        }, 300, function () {
-            $('#navbarProfile').collapse('hide');
-        });
+    $('#navbarProfile .close').click(function (e) {
+        $('#navbarProfile').collapse('hide');
     });
     //--------------------------------- Carousel ------------------------------------------------------------//
     $('.carousel').carousel({
@@ -371,16 +369,22 @@ $(document).ready(function () {
 
         //navbar animation on scroll
         if (isMobile) {
-            if ($window.scrollTop() > scrollTopVal) {
 
-                scrollTopVal = $window.scrollTop();
-                if ($('.navbar-collapse.show').exists()) {
-                    // console.log('exist');
-                } else {
-                    $('nav.navbar').removeClass('navbar-show');
-                    $('nav.navbar').addClass('navbar-hide');
+            if ($window.scrollTop() > scrollTopVal) {
+                if( $window.scrollTop() < 100 ){
+
+                }else{
+                    scrollTopVal = $window.scrollTop();
+                    if ($('.navbar-collapse.show').exists()) {
+                        // console.log('exist');
+                    } else {
+                        $('nav.navbar').removeClass('navbar-show');
+                        $('nav.navbar').addClass('navbar-hide');
+                    }
+    
                 }
 
+                
             } else {
                 scrollTopVal = $window.scrollTop();
                 if ($('.navbar-collapse.show').exists()) {
@@ -512,16 +516,16 @@ $(document).ready(function () {
             // }
         });
 
-        var skipValues = [
+        var skipValuesClone = [
             document.getElementById('skip-value-lower-clone'),
             document.getElementById('skip-value-upper-clone')
         ];
 
         sliderClone.noUiSlider.on('update', function (values, handle) {
-            skipValues[handle].value = values[handle];
+            skipValuesClone[handle].value = values[handle];
         });
 
-        $('#skip-value-lower,#skip-value-upper,#skip-value-lower-clone,#skip-value-upper-clone').on('change', function () {
+        $('#skip-value-lower-clone,#skip-value-upper-clone').on('change', function () {
             // console.log(this.value);
             if (this.value > 8000) {
                 this.value = 8000;
@@ -543,20 +547,7 @@ $(document).ready(function () {
                 $(".accordion-toggle").not($(this)).removeClass('open');
             }
         });
-        //---------------------------accordion inside modal----------------------------------
-        $('.modal-body .accordion-box').children('.accordion-toggle').on('click', function () {
-            $('.modal-back').removeClass('d-none');
-            $('.modal-header h5').text($(this).text());
-            $('.accordion-toggle').addClass('d-none');
-            $(this).next().addClass('d-inline-block');
-        });
-        $('.modal-back,.close').on('click', function () {
-            $('.accordion-content').removeClass('d-inline-block');
-            $('.accordion-toggle').removeClass('d-none');
-            $('.modal-back').addClass('d-none');
-            $('.modal-header h5').text('Filter by');
-        });
-
+        //filters in mobile mode collase
         $('#filters-collapse-btn').click(function () {
             if ($('#filters-collapse').css('display') == "none") {
                 // console.log('has');
@@ -570,57 +561,58 @@ $(document).ready(function () {
         });
     }
     //--------------------------------zoom library----------------------------------------------------
-    if ($('.easyzoom').exists()) {
-
+    if ($('.zoom').exists()) {
         if (!isMobile) {
-            //hide flayout on hover on expand btn
-            $('.prod-expand').hover(function () {
-                $('.easyzoom .easyzoom-flyout').hide();
-                $('#easyZoomOverlay').addClass('d-none');
-            }, function () {
-                $('.easyzoom .easyzoom-flyout').show();
-                $('#easyZoomOverlay').removeClass('d-none');
-            });
-
-            $('.easyzoom').hover(function () {
-                $('#easyZoomOverlay').removeClass('d-none');
-            }, function () {
-                $('#easyZoomOverlay').addClass('d-none');
-            });
+            $('#zoomItem').zoom();
         } else {
-            $('.easyzoom').removeClass('easyzoom--adjacent');
+            $('#zoomItem').click(function (e) {
+
+                var parentOffset = $(this).parent().offset();
+                //or $(this).offset(); if you really just want the current element's offset
+                var relX = e.pageX - parentOffset.left;
+                var relY = e.pageY - parentOffset.top;
+
+                var relXprecentage = relX / $('#zoomItem img').css('width').slice(0, -2);
+                var relYprecentage = relY / $('#zoomItem img').css('height').slice(0, -2);
+
+                relXprecentage = Math.round(relXprecentage * 100);
+                relYprecentage = Math.round(relYprecentage * 100);
+
+                if ($('#zoomItem img').css('transform') == "matrix(2, 0, 0, 2, 0, 0)") {
+                    // console.log('scale 2');
+                    $('#zoomItem img').css('transform', "matrix(1, 0, 0, 1, 0, 0)");
+
+                } else if ($('#zoomItem img').css('transform') == "matrix(1, 0, 0, 1, 0, 0)" ||
+                    $('#zoomItem img').css('transform') == "none") {
+                    // console.log('scale 1');
+                    $('#zoomItem img').css({
+                        'transform': 'scale(' + 2 + ')',
+                        'transform-origin': relXprecentage + '% ' + relYprecentage + '%'
+                    });
+                }
+                // console.log($('#zoomItem img').css('transform'));
+                // console.log( relXprecentage,relXprecentage );
+            });
         }
-        // Instantiate EasyZoom instances
-        var $easyzoom = $('.easyzoom').easyZoom();
 
-        // Setup thumbnails
-        var api1 = $easyzoom.filter('.easyzoom--with-thumbnails').data('easyZoom');
-
-        $('.thumbnails').on('click', 'a', function (e) {
-            var $this = $(this);
+        $('.thumbnails li').click(function () {
             $('.thumbnails li').removeClass('zoom-active');
-            $this.parent().addClass('zoom-active');
-            e.preventDefault();
-
-            // Use EasyZoom's `swap` method
-            api1.swap($this.data('standard'), $this.attr('href'));
+            $(this).addClass('zoom-active');
+            $('.zoom').children('img').attr('src', $(this).children('span').data('standard'));
         });
 
-        $('.easyzoom button').mousedown(function(){
-            console.log('aa');
-            console.log($(this));
-            $('.prod-fullScreen img').attr('src',$(this).parent().attr('href'));
+        $('.prod-expand').click(function () {
+            $('.prod-fullScreen img').attr('src', $('.zoom-active span').data('standard'));
             $('.prod-fullScreen').removeClass('d-none');
         });
-        $('.prod-fullScreen button').click(function(){
+
+        $('.prod-fullScreen button').click(function () {
             $('.prod-fullScreen').addClass('d-none');
         });
     }
     //-------------------------------------colors in product page------------------------------------------
     if ($('#color-1-AA149').exists()) {
-        spanText = "Vintage Camel",
-            originalThumbnails = $('.thumbnails').html();
-
+        spanText = "Vintage Camel";
         //show color value on click in a span
         $('#color-1-AA149,#color-2-AA149,#color-3-AA149').click(function () {
             spanText = $(this).val();
@@ -628,43 +620,30 @@ $(document).ready(function () {
 
             if ($(this).val() == "Vintage Camel") {
 
-                $('.easyzoom a').attr('href', "./images/vintage-camel-topcoat-primary-zoom.jpeg");
-                $('.easyzoom img').attr('src', "./images/vintage-camel-topcoat-primary.jpeg");
-                $('.thumbnails').html(originalThumbnails);
-                $('.zoom-active a').trigger('click');
+                $('.zoom').children('img')
+                    .attr('src', "./images/vintage-camel-topcoat-primary-zoom.jpeg");
+                $('.thumbnails li.navy,.thumbnails li.hthr').addClass('d-none');
+                $('.thumbnails li.vintage-camel').removeClass('d-none');
+                $('.thumbnails li.vintage-camel:first-child').trigger("click");
 
             } else if ($(this).val() == "Hthr Charcoal") {
 
-                $('.easyzoom a').attr('href', "./images/AA149_Hthr_Charcoal_zoom.jpeg");
-                $('.easyzoom img').attr('src', "./images/AA149_Hthr_Charcoal.jpeg");
-                $('.thumbnails').html(' ');
-                $('.thumbnails').append(
-                    $('<li/>').addClass("zoom-active").append(
-                        $('<a/>').attr('href', "./images/AA149_Hthr_Charcoal_zoom.jpeg")
-                        .data('standard', "./images/AA149_Hthr_Charcoal.jpeg")
-                        .append(
-                            $('<img/>').attr('src', "./images/AA149_Hthr_Charcoal_thumbnail.jpeg")
-                        )
-                    )
-                );
-                $('.zoom-active a').trigger('click');
+                $('.zoom').children('img')
+                    .attr('src', "./images/AA149_Hthr_Charcoal_zoom.jpeg");
+                $('.thumbnails li.navy,.thumbnails li.vintage-camel').addClass('d-none');
+                $('.thumbnails li.hthr').removeClass('d-none');
+                $('.thumbnails li.hthr').trigger("click");
 
             } else if ($(this).val() == "Navy") {
-                $('.easyzoom a').attr('href', "./images/AA149_Navy_zoom.jpeg");
-                $('.easyzoom img').attr('src', "./images/AA149_Navy.jpeg");
-                $('.thumbnails').html(' ');
-                $('.thumbnails').append(
-                    $('<li/>').addClass("zoom-active").append(
-                        $('<a/>').attr('href', "./images/AA149_Navy_zoom.jpeg")
-                        .data('standard', "./images/AA149_Navy.jpeg")
-                        .append(
-                            $('<img/>').attr('src', "./images/AA149_Navy_thumbnail.jpeg")
-                        )
-                    )
-                );
-                $('.zoom-active a').trigger('click');
+
+                $('.zoom').children('img')
+                    .attr('src', "./images/AA149_Navy_zoom.jpeg");
+                $('.thumbnails li.hthr,.thumbnails li.vintage-camel').addClass('d-none');
+                $('.thumbnails li.navy').removeClass('d-none');
+                $('.thumbnails li.navy').trigger("click");
+
             }
-            
+
         });
 
         //change primary image of product on hover
@@ -672,18 +651,22 @@ $(document).ready(function () {
 
             if ($(this).children('input').val() == "Vintage Camel") {
                 $('#prod-AA149-color').html($(this).children('input').val());
-                $('.easyzoom img').attr('src', "./images/vintage-camel-topcoat-primary.jpeg");
+                if ($('.thumbnails .vintage-camel.zoom-active span').exists()) {
+                    $('.zoom').children('img').attr('src', $('.thumbnails .zoom-active span').data('standard'));
+                } else {
+                    $('.zoom').children('img').attr('src', "./images/vintage-camel-topcoat-primary-zoom.jpeg");
+                }
             } else if ($(this).children('input').val() == "Hthr Charcoal") {
                 $('#prod-AA149-color').html($(this).children('input').val());
-                $('.easyzoom img').attr('src', "./images/AA149_Hthr_Charcoal.jpeg");
+                $('.zoom').children('img').attr('src', "./images/AA149_Hthr_Charcoal.jpeg");
             } else if ($(this).children('input').val() == "Navy") {
                 $('#prod-AA149-color').html($(this).children('input').val());
-                $('.easyzoom img').attr('src', "./images/AA149_Navy.jpeg");
+                $('.zoom').children('img').attr('src', "./images/AA149_Navy.jpeg");
             }
 
         }, function () {
             $('#prod-AA149-color').html(spanText);
-            $('.easyzoom img').attr('src', $('.zoom-active a').data('standard'));
+            $('.zoom').children('img').attr('src', $('.thumbnails .zoom-active span').data('standard'));
         });
     }
     //-------------------------------------Sizes in product page-------------------------------------------
@@ -700,6 +683,208 @@ $(document).ready(function () {
             }
 
         });
+    }
+
+    //-------------------------------------product details accordion in product page-------------------------------------------
+    if ($('.prod-details span').css('display') == "block") {
+        $('.prod-details .border-top div').removeClass('open');
+        $('.prod-details .border-top').children('ul, p').slideUp('fast');
+        $('.prod-details .border-top div span').children().removeClass('fa-minus');
+        $('.prod-details .border-top div span').children().addClass('fa-plus');
+        $('.prod-details .border-top div').click(function () {
+            if ($(this).hasClass('open')) {
+                $(this).removeClass('open');
+                $(this).children('span').children().removeClass('fa-minus');
+                $(this).children('span').children().addClass('fa-plus');
+                $(this).parent().children('ul, p').slideUp('fast');
+            } else {
+                $(this).addClass('open');
+                $(this).children('span').children().addClass('fa-minus');
+                $(this).children('span').children().removeClass('fa-plus');
+                $(this).parent().children('ul, p').slideDown('fast');
+            }
+
+        });
+    }
+    //-------------------------------------product modal in product page------------------------------------------
+    if ($('#productModal').exists()) {
+
+    }
+    //------------------------------------contact us map-------------------------------------------------------------
+    if ($('#map').exists()) {
+        // Initialize and add the map
+        function initMap() {
+            // The location of Uluru
+            var uluru = {
+                lat: 30.0570515,
+                lng: 31.3306219
+            };
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+                document.getElementById('map'), {
+                    zoom: 10,
+                    center: uluru
+                });
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+        initMap();
+    }
+    //------------------------------------whishlist close button-------------------------------------------------------------
+    if ($('.wishlist').exists()) {
+        $('.wishlist .close').click(function () {
+            $(this).parent().parent().fadeOut(300, function () {
+                $(this).remove();
+                if ($('.wishlist tr').length == 1) {
+                    $('.wishlist tr').remove();
+                    $('.wishlist>div').append(
+                        $('<p>No products were added to the wishlist</p>').addClass('border px-2 py-3 bg-light')
+                    );
+                }
+            });
+            // console.log($('.wishlist tr').length);
+
+        });
+
+    }
+    //------------------------------------sign in fields account page-------------------------------------------------------------
+    if ($('.login,.signUp,.forgot-password').exists()) {
+
+        $('.login input[type="email"], .login input[type="password"],.signUp input[type="email"], .signUp input[type="password"], .forgot-password input[type="email"]').blur(function () {
+            if ($(this).val() !== "") {
+                $(this).addClass('hasValue');
+            } else {
+                $(this).removeClass('hasValue');
+            }
+        });
+
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+
+        $('.login a[data-toggle="tooltip"], .signUp a[data-toggle="tooltip"]').click(function () {
+            if ($(this).children().hasClass('fa-eye')) {
+                $(this).children().removeClass('fa-eye').addClass('fa-eye-slash');
+                $(this).prev().prev().attr('type', 'text');
+            } else {
+                $(this).children().removeClass('fa-eye-slash').addClass('fa-eye');
+                $(this).prev().prev().attr('type', 'password');
+            }
+
+        });
+
+        $('button[type="submit"]').click(function (e) {
+            e.preventDefault();
+            var emailCheck = new RegExp("/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/");
+            if ($('input[type="email"]').val() == "" || emailCheck.test($('input[type="email"]').val()) == false) {
+                $('input[type="email"]').css('border', '1px solid #D0021B');
+                $('input[type="email"]').parent().next().removeClass('d-none');
+            } else {
+                $('input[type="email"]').css('border', '1px solid #ced4da');
+                $('input[type="email"]').parent().next().addClass('d-none');
+            }
+            var passwordCheck = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{8,})");
+            console.log(passwordCheck.test($('#login-password').val()));
+            if ($('#login-password').val() == "") {
+                $('#login-password').css('border', '1px solid #D0021B');
+                $('#password-empty').removeClass('d-none');
+                $('#password-error').addClass('d-none');
+            } else if (!(passwordCheck.test($('#login-password').val()))) {
+                $('#login-password').css('border', '1px solid #D0021B');
+                $('#password-error').removeClass('d-none');
+                $('#password-empty').addClass('d-none');
+            } else {
+                $('#login-password').css('border', '1px solid #ced4da');
+                $('#password-empty').addClass('d-none');
+                $('#password-error').addClass('d-none');
+            }
+        });
+    }
+
+    //------------------------------------checkout promo card-------------------------------------------------------------
+    if ($('.cart-sidebar .promo-code,.checkout-sidebar .promo-code').exists()) {
+        $('.promo-code div:first-child').click(function () {
+            $(this).next().toggleClass('d-none').find('input').focus();
+        });
+
+        $('.promo-code div:last-child button').click(function () {
+            if ($(this).prev().prev().val() == "" || $(this).prev().prev().val().length < 6) {
+                $(this).prev().prev().css('border', '1px solid #D0021B');
+                $(this).prev().css({
+                    'color': 'rgb(255, 23, 50)',
+                    'font-weight': 'bold',
+                    'margin-bottom': '0'
+                }).removeClass('d-none')
+            } else {
+                $(this).prev().prev().css('border', '1px solid #ced4da');
+                $(this).prev().addClass('d-none');
+            }
+        });
+    }
+    //------------------------------------checkout address info checks-------------------------------------------------------------
+    if ($('.checkout form').exists()) {
+        $('.checkout form #first-name,.checkout form #last-name,.checkout form #inputCity').blur(function () {
+            if ($(this).val() == "") {
+                $(this).css('border', '1px solid #D0021B');
+                $(this).next().css({
+                    'color': 'rgb(255, 23, 50)',
+                    'font-weight': 'bold',
+                    'margin-bottom': '0'
+                }).removeClass('d-none');
+            } else {
+                $(this).css('border', '1px solid #ced4da');
+                $(this).next().addClass('d-none');
+            }
+        });
+
+        $('.checkout form #inputAddress').blur(function () {
+            if ($(this).val() == "") {
+                $(this).css('border', '1px solid #D0021B');
+                $(this).next().next().css({
+                    'color': 'rgb(255, 23, 50)',
+                    'font-weight': 'bold',
+                    'margin-bottom': '0'
+                }).removeClass('d-none');
+            } else {
+                $(this).css('border', '1px solid #ced4da');
+                $(this).next().next().addClass('d-none');
+            }
+        });
+
+        $('.checkout form #inputNumber').val("+2");
+
+        var phoneNumber = new RegExp('(201)[0-9]{9}');
+        $('.checkout form #inputNumber').blur(function () {
+            if (phoneNumber.test($(this).val())) {
+                $(this).css('border', '1px solid #ced4da');
+                $(this).next().addClass('d-none');
+            } else {
+                $(this).css('border', '1px solid #D0021B');
+                $(this).next().css({
+                    'color': 'rgb(255, 23, 50)',
+                    'font-weight': 'bold',
+                    'margin-bottom': '0'
+                }).removeClass('d-none');
+            }
+        });
+
+        $('.step1-continue').click(function (e) {
+            if ($('.checkout form #first-name').val() == "" ||
+                $('.checkout form #last-name').val() == "" ||
+                $(".checkout form #inputCity").val() == "" ||
+                $('.checkout form #inputAddress').val() == "" ||
+                !(phoneNumber.test($(".checkout form #inputNumber").val()))) {
+                e.preventDefault();
+                $('.checkout form input').trigger('blur');
+            } else {
+                $("#shipping-form").trigger('submit');
+            }
+        });
+
     }
 
 

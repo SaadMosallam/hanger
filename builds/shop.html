@@ -83,12 +83,12 @@
                                              flex-column w-100">
                                                 <div class="d-flex flex-column py-3 position-relative mb-3 mb-lg-0">
                                                     <a class="h6 font-weight-bold stretched-link text-reset text-decoration-none nav-header"
-                                                        href="#">MensWear</a>
+                                                        href="shop.html">MensWear</a>
                                                     <img class="img-fluid" src="./images/man.jpg" alt="man">
                                                 </div>
                                                 <div class="d-flex flex-column py-3 position-relative">
                                                     <a class="h6 font-weight-bold stretched-link text-reset text-decoration-none nav-header"
-                                                        href="shopWomen.html">Women</a>
+                                                        href="shop.html">Women</a>
                                                     <img class="img-fluid" src="./images/woman.jpg" alt="woman">
                                                 </div>
                                             </div>
@@ -96,19 +96,23 @@
                                         <!--col-->
 
                                         <div
-                                            class="col-lg-4 col-12 d-flex py-3 justify-content-lg-center justify-content-center align-items-center shopNav">
-                                            <div class="d-flex flex-column">
-                                                <h1 class="h6 font-weight-bold text-nowrap nav-header">Shop New Arrivals
-                                                </h1>
-                                                <a class="dropdown-item pl-0" href="#">Blue Blazer</a>
-                                                <a class="dropdown-item pl-0" href="#">Wool Blend Hat</a>
-                                                <a class="dropdown-item pl-0" id="trendy" href="#">Trendy Watch</a>
-                                                <a class="dropdown-item pl-0" href="#">Leather Jacket</a>
-                                                <a class="dropdown-item pl-0" href="#">Wool Scarf</a>
-                                                <a class="dropdown-item pl-0" href="#">Casual Wool Top</a>
-                                            </div>
+                                        class="col-lg-4 col-12 d-flex py-3 justify-content-lg-center justify-content-center align-items-center shopNav">
+                                        <div class="d-flex flex-column">
+                                            <h1 class="h6 font-weight-bold text-nowrap nav-header">Shop New Arrivals
+                                            </h1>
+                                            <a class="dropdown-item pl-0" href="product.html">Topcoat In
+                                                Wool-Cashmere</a>
+                                            <a class="dropdown-item pl-0" href="product.html">Daphne Topcoat In
+                                                Tweed</a>
+                                            <a class="dropdown-item pl-0" id="trendy" href="product.html">Ribbed
+                                                Beanie</a>
+                                            <a class="dropdown-item pl-0" href="product.html">Cape Sunglasses</a>
+                                            <a class="dropdown-item pl-0" href="product.html">Rugby Crewneck
+                                                Shirt</a>
+                                            <a class="dropdown-item pl-0" href="product.html">Striped T-Shirt</a>
                                         </div>
-                                        <!--col-->
+                                    </div>
+                                    <!--col-->
                                     </div>
                                     <!--inner row-->
                                 </div>
@@ -168,19 +172,19 @@
                                                 mb-3 mb-lg-0 mt-1 mt-lg-0 pagesNav2">
                                             <div class="d-flex flex-column">
                                                 <h1 class="h6 font-weight-bold text-nowrap nav-header">Shop Pages</h1>
-                                                <a class="dropdown-item pl-0" href="#">Merchant
+                                                <a class="dropdown-item pl-0" href="shop.html">Hanger
                                                     Shop</a>
-                                                <a class="dropdown-item pl-0" href="#">Product
+                                                <a class="dropdown-item pl-0" href="product.html">Product
                                                     Page</a>
-                                                <a class="dropdown-item pl-0" href="#">Variable
+                                                <a class="dropdown-item pl-0" href="product.html">Variable
                                                     Product</a>
-                                                <a class="dropdown-item pl-0" href="#">Whishlist</a>
-                                                <a class="dropdown-item pl-0" href="#">My
+                                                <a class="dropdown-item pl-0" href="wishlist.html">Whishlist</a>
+                                                <a class="dropdown-item pl-0" href="signIn.html">My
                                                     Account</a>
-                                                <a class="dropdown-item pl-0" href="#">Your
+                                                <a class="dropdown-item pl-0" href="shoppingCart.html">Your
                                                     Cart</a>
-                                                <a class="dropdown-item pl-0" href="#">Checkout</a>
-                                                <a class="dropdown-item pl-0" href="#">Lost
+                                                <a class="dropdown-item pl-0" href="checkout-step1.html">Checkout</a>
+                                                <a class="dropdown-item pl-0" href="forgetPassword.html">Lost
                                                     Password</a>
                                             </div>
                                         </div>
@@ -260,8 +264,9 @@
                 <!--navbar nav-->
             </div>
             <!--navbar collapse-->
+
             <div class="navbar-nav  flex-row order-3  mt-lg-3" id="nav-right">
-                <a class="nav-item nav-link px-2" href="#">
+                <a class="nav-item nav-link px-2" href="shoppingCart.html">
                     <i class="fas fa-shopping-cart"></i>
                 </a>
 
@@ -282,7 +287,7 @@
                                             class="form-control">
                                     </div>
                                     <div class="col-xl-2 offset-xl-2 col-lg-3 offset-lg-1 col-md-4 col-4">
-                                        <button class="btn btn-outline-success" type="submit">Search</button>
+                                        <button class="btn btn-search" type="submit">Search</button>
                                     </div>
                                     <div class="col-12 d-flex justify-content-start">
                                         <hr>
@@ -304,40 +309,43 @@
                         <button type="button" class="close align-self-end mr-lg-5 mt-4 mr-4" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <div class="row no-gutters">
-                            <div
-                                class="col-md-3 col-sm-6 col-12 mt-sm-3 mt-4  d-flex justify-content-center align-items-center pt-2 pb-3">
-                                <div class="position-relative">
-                                    <i class="far fa-user d-block text-center mb-3"></i>
-                                    <a href="#" class="text-muted text-decoration-none  stretched-link">My Account</a>
-                                    <h2 class="text-muted mt-2">Order Tracking</h2>
+                        <div class="bg-white">
+                            <div class="row no-gutters pb-4">
+                                <div
+                                    class="col-md-3 col-sm-6 col-12 mt-sm-3 mt-4  d-flex justify-content-center align-items-center pt-2 pb-3">
+                                    <div class="position-relative">
+                                        <i class="far fa-user d-block text-center mb-3"></i>
+                                        <a href="signIn.html" class="text-muted text-decoration-none  stretched-link">My Account</a>
+                                        <h2 class="text-muted mt-2">Order Tracking</h2>
+                                    </div>
                                 </div>
-                            </div>
-                            <div
-                                class="col-md-3 col-sm-6 col-12 mt-sm-3 mt-4   d-flex justify-content-center align-items-center">
-                                <div class="position-relative">
-                                    <i class="far fa-heart d-block text-center mb-3"></i>
-                                    <a href="#" class="text-muted text-decoration-none  stretched-link">My Wishlist</a>
-                                    <h2 class="text-muted mt-2">Stuff I Love</h2>
+                                <div
+                                    class="col-md-3 col-sm-6 col-12 mt-sm-3 mt-4   d-flex justify-content-center align-items-center">
+                                    <div class="position-relative">
+                                        <i class="far fa-heart d-block text-center mb-3"></i>
+                                        <a href="wishlist.html" class="text-muted text-decoration-none  stretched-link">My Wishlist</a>
+                                        <h2 class="text-muted mt-2">Stuff I Love</h2>
+                                    </div>
                                 </div>
-                            </div>
-                            <div
-                                class="col-md-3 col-sm-6 col-12 mt-sm-3 mt-4  d-flex justify-content-center align-items-center">
-                                <div class="position-relative">
-                                    <i class="far fa-question-circle d-block text-center mb-3"></i>
-                                    <a href="#" class="text-muted text-decoration-none  stretched-link mx-5">FAQ</a>
-                                    <h2 class="text-muted mt-2">Get Answers</h2>
+                                <div
+                                    class="col-md-3 col-sm-6 col-12 mt-sm-3 mt-4  d-flex justify-content-center align-items-center">
+                                    <div class="position-relative">
+                                        <i class="far fa-question-circle d-block text-center mb-3"></i>
+                                        <a href="contactUs.html" class="text-muted text-decoration-none  stretched-link mx-5">FAQ</a>
+                                        <h2 class="text-muted mt-2">Get Answers</h2>
+                                    </div>
                                 </div>
-                            </div>
-                            <div
-                                class="col-md-3 col-sm-6 col-12 mt-sm-3 mt-4   d-flex justify-content-center align-items-center">
-                                <div class="position-relative">
-                                    <i class="far fa-envelope d-block text-center mb-3"></i>
-                                    <a href="#" class="text-muted text-decoration-none  stretched-link">Get in Touch</a>
-                                    <h2 class="text-muted mt-2">We don't bite</h2>
+                                <div
+                                    class="col-md-3 col-sm-6 col-12 mt-sm-3 mt-4   d-flex justify-content-center align-items-center">
+                                    <div class="position-relative">
+                                        <i class="far fa-envelope d-block text-center mb-3"></i>
+                                        <a href="contactUs.html" class="text-muted text-decoration-none  stretched-link">Get in Touch</a>
+                                        <h2 class="text-muted mt-2">We don't bite</h2>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                     <!--inner Profile-->
                 </div>
@@ -348,9 +356,11 @@
     </header>
 
     <main>
-        <div class="jumbotron mb-0 jumbotron-fluid d-flex flex-column justify-content-center align-items-start position-relative">
+        <div
+            class="jumbotron jumbotron-shop mb-0 jumbotron-fluid d-flex flex-column justify-content-center align-items-start position-relative">
             <div id="jumbotron-cover" class="d-block d-lg-none"></div>
-            <div class="ml-2 pt-sm-5 pt-2 pl-lg-5 mt-5 d-flex flex-column align-items-center align-items-lg-start justify-content-center">
+            <div
+                class="ml-2 pt-sm-5 pt-2 pl-lg-5 mt-5 d-flex flex-column align-items-center align-items-lg-start justify-content-center">
                 <h1 class="font-weight-bold mt-n5 mb-1">Hanger Shop</h1>
                 <span class="d-block font-weight-light mb-1">NEW SELECTIONS</span>
                 <div class="d-flex">
@@ -578,12 +588,12 @@
                         <h2 class="text-nowrap">Featured Products</h2>
                         <ul class="list-unstyled pt-2">
                             <li class="media pb-2">
-                                <a href="#">
+                                <a href="product.html">
                                     <img class="img-fluid align-self-center"
                                         src="./images/vintage-camel-topcoat-primary.jpeg" alt="">
                                 </a>
                                 <div class="media-body d-flex flex-column justify-content-between ml-1">
-                                    <a href="#" class="my-0 h6 text-nowrap text-reset text-decoration-none">Topcoat in
+                                    <a href="product.html" class="my-0 h6 text-nowrap text-reset text-decoration-none">Topcoat in
                                         wool</a>
 
                                     <p class="text-nowrap mb-0 mt-4"><span class="font-weight-bold">EGP 7402.30</span>
@@ -593,12 +603,12 @@
                             </li>
                             <!--item-->
                             <li class="media py-2 border-top border-bottom">
-                                <a href="#">
+                                <a href="product.html">
                                     <img class="img-fluid align-self-center"
                                         src="./images/navy-women-jacket-secondary.jpeg" alt="">
                                 </a>
                                 <div class="media-body d-flex flex-column justify-content-around ml-1">
-                                    <a href="#" class="my-0 h6 text-nowrap text-decoration-none text-reset">Peacoat in
+                                    <a href="product.html" class="my-0 h6 text-nowrap text-decoration-none text-reset">Peacoat in
                                         wool</a>
 
                                     <p class="text-nowrap mb-0 mt-4">
@@ -608,12 +618,12 @@
                             </li>
                             <!--item-->
                             <li class="media pt-2">
-                                <a href="#">
+                                <a href="product.html">
                                     <img class="img-fluid align-self-center" src="./images/cape-sunglasses-primary.jpeg"
                                         alt="">
                                 </a>
                                 <div class="media-body d-flex flex-column justify-content-between ml-1">
-                                    <a href="#" class="my-0 h6 text-nowrap text-reset text-decoration-none">Cape
+                                    <a href="product.html" class="my-0 h6 text-nowrap text-reset text-decoration-none">Cape
                                         sunglasses</a>
 
                                     <p class="text-nowrap mb-0 mt-4"><span class="font-weight-bold">EGP 1067.50</span>
@@ -630,12 +640,12 @@
                         <h2 class="text-nowrap">Top Rated Products</h2>
                         <ul class="list-unstyled pt-2">
                             <li class="media pb-2">
-                                <a href="#">
+                                <a href="product.html">
                                     <img class="img-fluid align-self-center"
                                         src="./images/rugby-crewneck-shirt-primary.jpeg" alt="">
                                 </a>
                                 <div class="media-body d-flex flex-column justify-content-around ml-1">
-                                    <a href="#" class="my-0 h6 text-nowrap text-decoration-none text-reset">Rugby
+                                    <a href="product.html" class="my-0 h6 text-nowrap text-decoration-none text-reset">Rugby
                                         crewneck shirt</a>
                                     <ul class="list-unstyled flex-row border-0 mt-2">
                                         <i class="fas fa-star p-0 text-danger"></i><i
@@ -652,12 +662,12 @@
                             </li>
                             <!--item-->
                             <li class="media py-2 border-top border-bottom">
-                                <a href="#">
+                                <a href="product.html">
                                     <img class="img-fluid align-self-center"
                                         src="./images/v-neck-wide-leg-velvet-jumpsuit-primary.jpeg" alt="">
                                 </a>
                                 <div class="media-body d-flex flex-column justify-content-between ml-1">
-                                    <a href="#" class="my-0 h6 text-nowrap text-reset text-decoration-none">V-neck
+                                    <a href="product.html" class="my-0 h6 text-nowrap text-reset text-decoration-none">V-neck
                                         velvet jumpsuit</a>
                                     <ul class="list-unstyled flex-row border-0 mt-2">
                                         <i class="fas fa-star p-0 text-danger"></i><i
@@ -672,12 +682,12 @@
                             </li>
                             <!--item-->
                             <li class="media pt-2">
-                                <a href="#">
+                                <a href="product.html">
                                     <img class="img-fluid align-self-center"
                                         src="./images/ribbed-beanie-with-faux-fur-primary.jpeg" alt="">
                                 </a>
                                 <div class="media-body d-flex flex-column justify-content-between ml-1">
-                                    <a href="#" class="my-0 h6 text-nowrap text-reset text-decoration-none">Ribbed
+                                    <a href="product.html" class="my-0 h6 text-nowrap text-reset text-decoration-none">Ribbed
                                         beanie</a>
                                     <ul class="list-unstyled flex-row border-0 mt-2">
                                         <i class="fas fa-star p-0 text-danger"></i><i
@@ -699,12 +709,12 @@
                         <h2>On Sale Now!</h2>
                         <ul class="list-unstyled pt-2">
                             <li class="media pb-2">
-                                <a href="#">
+                                <a href="product.html">
                                     <img class="img-fluid align-self-center"
                                         src="./images/band-collar-tunic-primary.jpeg" alt="">
                                 </a>
                                 <div class="media-body d-flex flex-column justify-content-between ml-1">
-                                    <a href="#" class="my-0 h6 text-nowrap text-reset text-decoration-none">Band-collar
+                                    <a href="product.html" class="my-0 h6 text-nowrap text-reset text-decoration-none">Band-collar
                                         tunic</a>
 
                                     <p class="text-nowrap mb-0 mt-4"><del class="text-muted font-weight-bold">EGP
@@ -715,12 +725,12 @@
                             </li>
                             <!--item-->
                             <li class="media py-2 border-top border-bottom">
-                                <a href="#">
+                                <a href="product.html">
                                     <img class="img-fluid align-self-center"
                                         src="./images/rugby-crewneck-shirt-primary.jpeg" alt="">
                                 </a>
                                 <div class="media-body d-flex flex-column justify-content-around ml-1">
-                                    <a href="#" class="my-0 h6 text-nowrap text-reset text-decoration-none">Rugby
+                                    <a href="product.html" class="my-0 h6 text-nowrap text-reset text-decoration-none">Rugby
                                         crewneck
                                         shirt</a>
                                     <ul class="list-unstyled flex-row border-0 mt-2">
@@ -738,12 +748,12 @@
                             </li>
                             <!--item-->
                             <li class="media pt-2">
-                                <a href="#">
+                                <a href="product.html">
                                     <img class="img-fluid align-self-center"
                                         src="./images/striped-long-sleeve-t-shirt-primary.jpeg" alt="">
                                 </a>
                                 <div class="media-body d-flex flex-column justify-content-between ml-1">
-                                    <a href="#" class="my-0 h6 text-nowrap text-reset text-decoration-none">Striped
+                                    <a href="product.html" class="my-0 h6 text-nowrap text-reset text-decoration-none">Striped
                                         T-shirt</a>
 
                                     <p class="text-nowrap mb-0 mt-4"><del class="text-muted font-weight-bold">EGP
@@ -1023,17 +1033,18 @@
 
                     <div class="col-lg-3 col-md-4 col-sm-6 p-2">
                         <div class="card rounded-0 border-0 ">
-                            <div class="img-container">
+                            <div class="img-container position-relative">
                                 <img src="./images/blue-women-coat-secondary.jpeg" class="card-img-bottom" alt="">
                                 <img src="./images/blue-women-coat-primary.jpeg" class="card-img-top" alt="">
-                                <a href="#"
+                                <a href="product.html" class="stretched-link"></a>
+                                <a href="productModal" data-toggle="modal" data-target="#productModal"
                                     class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
                                     View</a>
                             </div>
                             <div class="card-body px-1 d-flex flex-column justify-content-start p-1">
                                 <h5 class="card-title">Daphne topcoat in tweed</h5>
                                 <h6 class="h6 text-center font-weight-bold">EGP 5342.40</h6>
-                                <button class="btn btn-outline-success align-self-center">select
+                                <button class="btn btn-select-options align-self-center" onclick="window.location.href='product.html'">select
                                     options</button>
                             </div>
                         </div>
@@ -1042,10 +1053,11 @@
                     <!--col-->
                     <div class="col-lg-3 col-md-4 col-sm-6 p-2">
                         <div class="card rounded-0 border-0 ">
-                            <div class="img-container">
+                            <div class="img-container position-relative">
                                 <img src="./images/biscuit-women-jacket-secondary.jpeg" class="card-img-bottom" alt="">
                                 <img src="./images/biscuit-women-jacket-primary.jpeg" class="card-img-top" alt="">
-                                <a href="#"
+                                <a href="product.html" class="stretched-link"></a>
+                                <a href="productModal" data-toggle="modal" data-target="#productModal"
                                     class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
                                     View</a>
                             </div>
@@ -1053,7 +1065,7 @@
                             <div class="card-body px-1 d-flex flex-column justify-content-start p-1">
                                 <h5 class="card-title">Daphne topcoat in wool</h5>
                                 <h6 class="h6 text-center font-weight-bold">EGP 5346.10</h6>
-                                <button class="btn btn-outline-success align-self-center">select
+                                <button class="btn btn-select-options align-self-center" onclick="window.location.href='product.html'">select
                                     options</button>
                             </div>
                         </div>
@@ -1062,10 +1074,11 @@
                     <!--col-->
                     <div class="col-lg-3 col-md-4 col-sm-6 p-2">
                         <div class="card rounded-0 border-0 ">
-                            <div class="img-container">
+                            <div class="img-container position-relative">
                                 <img src="./images/navy-women-jacket-secondary.jpeg" class="card-img-bottom" alt="">
                                 <img src="./images/navy-women-jacket-primary.jpeg" class="card-img-top" alt="">
-                                <a href="#"
+                                <a href="product.html" class="stretched-link"></a>
+                                <a href="productModal" data-toggle="modal" data-target="#productModal"
                                     class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
                                     View</a>
                             </div>
@@ -1073,7 +1086,7 @@
                             <div class="card-body px-1 d-flex flex-column justify-content-start p-1">
                                 <h5 class="card-title">Peacoat in wool</h5>
                                 <h6 class="h6 text-center font-weight-bold">EGP 4902.00</h6>
-                                <button class="btn btn-outline-success align-self-center">select
+                                <button class="btn btn-select-options align-self-center" onclick="window.location.href='product.html'">select
                                     options</button>
                             </div>
                         </div>
@@ -1082,10 +1095,11 @@
                     <!--card-->
                     <div class="col-lg-3 col-md-4 col-sm-6 p-2">
                         <div class="card rounded-0 border-0 ">
-                            <div class="img-container">
+                            <div class="img-container position-relative">
                                 <img src="./images/berry-women-jacket-secondary.jpeg" class="card-img-bottom" alt="">
                                 <img src="./images/berry-women-jacket-primary.jpeg" class="card-img-top" alt="">
-                                <a href="#"
+                                <a href="product.html" class="stretched-link"></a>
+                                <a href="productModal" data-toggle="modal" data-target="#productModal"
                                     class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
                                     View</a>
                             </div>
@@ -1093,7 +1107,7 @@
                             <div class="card-body px-1 d-flex flex-column justify-content-start p-1">
                                 <h5 class="card-title">Swing coat in wool</h5>
                                 <h6 class="h6 text-center font-weight-bold">EGP 5757.40</h6>
-                                <button class="btn btn-outline-success align-self-center">select
+                                <button class="btn btn-select-options align-self-center" onclick="window.location.href='product.html'">select
                                     options</button>
                             </div>
                         </div>
@@ -1107,26 +1121,245 @@
                                 <img src="./images/vintage-camel-topcoat-secondary.jpeg" class="card-img-bottom" alt="">
                                 <img src="./images/vintage-camel-topcoat-primary.jpeg" class="card-img-top" alt="">
                                 <a href="product.html" class="stretched-link"></a>
-                                <a href="shop.html"
+                                <a href="productModal" data-toggle="modal" data-target="#productModal"
                                     class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
                                     View</a>
                             </div>
                             <div class="card-body px-1 d-flex flex-column justify-content-start p-1">
                                 <h5 class="card-title">Topcoat in wool-cashmere</h5>
                                 <h6 class="h6 text-center font-weight-bold">EGP 7402.30</h6>
-                                <button class="btn btn-outline-success align-self-center">select
+                                <button class="btn btn-select-options align-self-center" onclick="window.location.href='product.html'">select
                                     options</button>
                             </div>
                         </div>
                         <!--card-->
                     </div>
                     <!--col-->
+
+                    <div class="modal fade" id="productModal" tabindex="-1" role="dialog"
+                        aria-labelledby="productModalTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered ml-4 ml-sm-5 ml-md-auto" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div class="row no-gutters pt-3">
+                                        <div class="col-lg-8 col-md-7 col-12 d-flex">
+                                            <div class="row no-gutters pr-md-3 pr-sm-0 px-1">
+
+                                                <ul class="col-lg-2 col-md-12 col-sm-2 order-lg-1 order-md-2 
+                                                order-sm-1 order-2 thumbnails d-flex flex-lg-column flex-md-row 
+                                                flex-sm-column align-items-start align-items-lg-end justify-content-center 
+                                                justify-content-sm-start pr-2 pb-1 mb-0 mt-sm-0 mt-2">
+                                                    <li class="zoom-active vintage-camel">
+                                                        <span
+                                                            data-standard="./images/vintage-camel-topcoat-primary-zoom.jpeg">
+                                                            <img src="./images/vintage-camel-topcoat-primary-thumbnail.jpeg"
+                                                                alt="" />
+                                                        </span>
+                                                    </li>
+                                                    <li class="mt-lg-3 mt-md-0 mt-sm-3 vintage-camel">
+                                                        <span
+                                                            data-standard="./images/vintage-camel-topcoat-secondary-zoom.jpeg">
+                                                            <img src="./images/vintage-camel-topcoat-secondary-thumbnail.jpeg"
+                                                                alt="" />
+                                                        </span>
+                                                    </li>
+                                                    <li class="mt-lg-3 mt-md-0 mt-sm-3 vintage-camel">
+                                                        <span
+                                                            data-standard="./images/vintage-camel-topcoat-3-zoom.jpeg">
+                                                            <img src="./images/vintage-camel-topcoat-3-thumbnail.jpeg"
+                                                                alt="" />
+                                                        </span>
+                                                    </li>
+                                                    <li class="mt-lg-3 mt-md-0 mt-sm-3 vintage-camel">
+                                                        <span
+                                                            data-standard="./images/vintage-camel-topcoat-4-zoom.jpeg">
+                                                            <img src="./images/vintage-camel-topcoat-4-thumbnail.jpeg"
+                                                                alt="" />
+                                                        </span>
+                                                    </li>
+                                                    <li class="mt-lg-3 mt-md-0 mt-sm-3 vintage-camel">
+                                                        <span
+                                                            data-standard="./images/vintage-camel-topcoat-5-zoom.jpeg">
+                                                            <img src="./images/vintage-camel-topcoat-5-thumbnail.jpeg"
+                                                                alt="" />
+                                                        </span>
+                                                    </li>
+                                                    <li class="zoom-active d-none navy">
+                                                        <span data-standard="./images/AA149_Navy_zoom.jpeg">
+                                                            <img src="/images/AA149_Navy_thumbnail.jpeg" alt="" />
+                                                        </span>
+                                                    </li>
+                                                    <li class="zoom-active d-none hthr">
+                                                        <span data-standard="./images/AA149_Hthr_Charcoal_zoom.jpeg">
+                                                            <img src="/images/AA149_Hthr_Charcoal_thumbnail.jpeg"
+                                                                alt="" />
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                                <!--col-->
+                                                <div class="col-lg-10 col-md-12 col-sm-10 
+                                            order-lg-2 order-md-1 order-sm-2 order-1 position-relative">
+                                                    <div class="zoom position-relative" id="zoomItem">
+                                                        <img class="img-fluid"
+                                                            src="./images/vintage-camel-topcoat-primary-zoom.jpeg"
+                                                            alt="" />
+                                                        <button class="btn rounded-0 bg-light prod-expand"><i
+                                                                class="fas fa-expand-arrows-alt"></i></button>
+                                                    </div>
+
+                                                    <div class="prod-fullScreen d-none">
+                                                        <div
+                                                            class="w-100 h-100 d-flex flex-column justify-content-start align-items-center">
+                                                            <div class="d-flex justify-content-between">
+                                                                <button class="btn border-0 rounded-0">
+                                                                    <i class="fas fa-chevron-left"></i>
+                                                                    <span">BACK TO PRODUCT</span>
+                                                                </button>
+                                                                <button class="btn border-0 rounded-0"><i
+                                                                        class="fas fa-times"></i></button>
+                                                            </div>
+                                                            <div class="">
+                                                                <img class="img-fluid" src="" alt="">
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--col-->
+                                            </div>
+                                        </div>
+                                        <!--col-->
+                                        <div
+                                            class="col-lg-4 col-md-5 col-12 mt-3 mt-md-0 px-2 prod-info position-relative">
+                                            <h1 class="font-weight-bold">Ludlow topcoat in wool-cashmere</h1>
+                                            <h2 class="text-muted">Item AA149</h2>
+                                            <p class="text-nowrap font-weight-bold"><span class="">EGP 7411.70</span>
+                                            </p>
+                                            <p class="text-muted">Color: <span class="font-weight-bold text-dark"
+                                                    id="prod-AA149-color">Vintage
+                                                    Camel</span></p>
+                                            <div class="custom-radios d-flex flex-row px-5" id="prod-AA149-colors">
+                                                <div class="mx-1">
+                                                    <input type="radio" id="color-1-AA149" name="color"
+                                                        value="Vintage Camel" checked>
+                                                    <label for="color-1-AA149">
+                                                        <span>
+                                                            <img src="./images/check-icn.svg" alt="Checked Icon" />
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                                <div class="mx-1">
+                                                    <input type="radio" id="color-2-AA149" name="color"
+                                                        value="Hthr Charcoal">
+                                                    <label for="color-2-AA149">
+                                                        <span>
+                                                            <img src="./images/check-icn.svg" alt="Checked Icon" />
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                                <div class="mx-1">
+                                                    <input type="radio" id="color-3-AA149" name="color" value="Navy">
+                                                    <label for="color-3-AA149">
+                                                        <span>
+                                                            <img src="./images/check-icn.svg" alt="Checked Icon" />
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <!--colors radio container-->
+                                            <p class="text-muted">Size: <span class="font-weight-bold text-dark"
+                                                    id="prod-AA149-size">Select
+                                                    a Size</span></p>
+                                            <div id="prod-AA149-sizes" class="mb-2">
+                                                <div class="option-group">
+                                                    <div class="option-container">
+
+                                                        <input class="option-input" id="prod-AA149-1" type="radio"
+                                                            name="prod-AA149" value="S" />
+                                                        <input class="option-input" id="prod-AA149-2" type="radio"
+                                                            name="prod-AA149" value="M" />
+
+                                                        <label class="option" for="prod-AA149-1">
+                                                            <span class="option__indicator"></span>
+                                                            <span class="option__label">
+                                                                <sub>S</sub>
+                                                            </span>
+                                                        </label>
+
+                                                        <label class="option" for="prod-AA149-2">
+                                                            <span class="option__indicator"></span>
+                                                            <span class="option__label">
+                                                                <sub>M</sub>
+                                                            </span>
+                                                        </label>
+
+                                                    </div>
+                                                </div>
+                                                <div class="option-group">
+                                                    <div class="option-container">
+
+                                                        <input class="option-input" id="prod-AA149-3" type="radio"
+                                                            name="prod-AA149" value="L" />
+                                                        <input class="option-input" id="prod-AA149-4" type="radio"
+                                                            name="prod-AA149" value="XL" />
+
+                                                        <label class="option" for="prod-AA149-3">
+                                                            <span class="option__indicator"></span>
+                                                            <span class="option__label">
+                                                                <sub>L</sub>
+                                                            </span>
+                                                        </label>
+
+                                                        <label class="option" for="prod-AA149-4">
+                                                            <span class="option__indicator"></span>
+                                                            <span class="option__label">
+                                                                <sub>XL</sub>
+                                                            </span>
+                                                        </label>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--sizes radio container-->
+                                            <div class="d-flex justify-content-start align-items-center mb-2">
+                                                <p class="text-muted m-0 mr-3">Quantity: </p>
+                                                <select class="custom-select rounded-0 prod-quantity">
+                                                    <option value="1" selected>1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                </select>
+                                            </div>
+                                            <!--Quantity-->
+                                            <div class="d-flex flex-column prod-action">
+                                                <button class="btn rounded-0 font-weight-bold mb-2">ADD TO CART</button>
+                                                <button class="btn rounded-0">ADD TO WHISHLIST</button>
+                                            </div>
+                                            <div id="easyZoomOverlay" class="d-none"></div>
+                                        </div>
+                                        <!--col-->
+                                    </div>
+                                </div>
+                                <!--modal body-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--modal-->
                     <div class="col-lg-3 col-md-4 col-sm-6 p-2">
                         <div class="card rounded-0 border-0">
-                            <div class="img-container">
+                            <div class="img-container position-relative">
                                 <img src="./images/bomber-navy-jacket-secondary.jpeg" class="card-img-bottom" alt="">
                                 <img src="./images/bomber-navy-jacket-primary.jpeg" class="card-img-top" alt="">
-                                <a href="#"
+                                <a href="product.html" class="stretched-link"></a>
+                                <a href="productModal" data-toggle="modal" data-target="#productModal"
                                     class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
                                     View</a>
                             </div>
@@ -1134,7 +1367,7 @@
                             <div class="card-body px-1 d-flex flex-column justify-content-start p-1">
                                 <h5 class="card-title">Bomber jacket in wool-blend</h5>
                                 <h6 class="h6 text-center font-weight-bold">EGP 3750.50</h6>
-                                <button class="btn btn-outline-success align-self-center">select
+                                <button class="btn btn-select-options align-self-center" onclick="window.location.href='product.html'">select
                                     options</button>
                             </div>
                         </div>
@@ -1143,10 +1376,11 @@
                     <!--col-->
                     <div class="col-lg-3 col-md-4 col-sm-6 p-2">
                         <div class="card rounded-0 border-0">
-                            <div class="img-container">
+                            <div class="img-container position-relative">
                                 <img src="./images/dusty-khaki-jacket-secondary.jpeg" class="card-img-bottom" alt="">
                                 <img src="./images/dusty-khaki-jacket-primary.jpeg" class="card-img-top" alt="">
-                                <a href="#"
+                                <a href="product.html" class="stretched-link"></a>
+                                <a href="productModal" data-toggle="modal" data-target="#productModal"
                                     class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
                                     View</a>
                             </div>
@@ -1154,7 +1388,7 @@
                             <div class="card-body px-1 d-flex flex-column justify-content-start p-1">
                                 <h5 class="card-title">Harrington jacket</h5>
                                 <h6 class="h6 text-center font-weight-bold">EGP 2928.00</h6>
-                                <button class="btn btn-outline-success align-self-center">select
+                                <button class="btn btn-select-options align-self-center" onclick="window.location.href='product.html'">select
                                     options</button>
                             </div>
                         </div>
@@ -1163,10 +1397,11 @@
                     <!--card-->
                     <div class="col-lg-3 col-md-4 col-sm-6 p-2">
                         <div class="card rounded-0 border-0">
-                            <div class="img-container">
+                            <div class="img-container position-relative">
                                 <img src="./images/faded-navy-jacket-secondary.jpeg" class="card-img-bottom" alt="">
                                 <img src="./images/faded-navy-jacket-primary.jpeg" class="card-img-top" alt="">
-                                <a href="#"
+                                <a href="product.html" class="stretched-link"></a>
+                                <a href="productModal" data-toggle="modal" data-target="#productModal"
                                     class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
                                     View</a>
 
@@ -1175,7 +1410,7 @@
                             <div class="card-body px-1 d-flex flex-column justify-content-start p-1">
                                 <h5 class="card-title">Box quilted Jacket</h5>
                                 <h6 class="h6 text-center font-weight-bold">EGP 3257.00</h6>
-                                <button class="btn btn-outline-success align-self-center">select
+                                <button class="btn btn-select-options align-self-center" onclick="window.location.href='product.html'">select
                                     options</button>
                             </div>
                         </div>
@@ -1184,12 +1419,13 @@
                     <!--col-->
                     <div class="col-lg-3 col-md-4 col-sm-6 p-2">
                         <div class="card rounded-0 border-0">
-                            <div class="img-container">
+                            <div class="img-container position-relative">
                                 <img src="./images/v-neck-wide-leg-velvet-jumpsuit-secondary.jpeg"
                                     class="card-img-bottom" alt="">
                                 <img src="./images/v-neck-wide-leg-velvet-jumpsuit-primary.jpeg" class="card-img-top"
                                     alt="">
-                                <a href="#"
+                                    <a href="product.html" class="stretched-link"></a>
+                                <a href="productModal" data-toggle="modal" data-target="#productModal"
                                     class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
                                     View</a>
 
@@ -1198,7 +1434,7 @@
                             <div class="card-body px-1 d-flex flex-column justify-content-start p-1">
                                 <h5 class="card-title">V-neck velvet jumpsuit</h5>
                                 <h6 class="h6 text-center font-weight-bold">EGP 2435.70</h6>
-                                <button class="btn btn-outline-success align-self-center">select
+                                <button class="btn btn-select-options align-self-center" onclick="window.location.href='product.html'">select
                                     options</button>
                             </div>
                         </div>
@@ -1207,12 +1443,13 @@
                     <!--col-->
                     <div class="col-lg-3 col-md-4 col-sm-6 p-2">
                         <div class="card rounded-0 border-0">
-                            <div class="img-container">
+                            <div class="img-container position-relative">
                                 <img src="./images/striped-long-sleeve-t-shirt-secondary.jpeg" class="card-img-bottom"
                                     alt="">
                                 <img src="./images/striped-long-sleeve-t-shirt-primary.jpeg" class="card-img-top"
                                     alt="">
-                                <a href="#"
+                                    <a href="product.html" class="stretched-link"></a>
+                                <a href="productModal" data-toggle="modal" data-target="#productModal"
                                     class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
                                     View</a>
 
@@ -1222,7 +1459,7 @@
                                 <h5 class="card-title">Striped T-shirt </h5>
                                 <h6 class="h6 text-center font-weight-bold"><del class="text-muted text-nowrap">EGP
                                         650.10</del> <span class="text-danger text-nowrap">EGP 592.30</span></h6>
-                                <button class="btn btn-outline-success align-self-center">select
+                                <button class="btn btn-select-options align-self-center" onclick="window.location.href='product.html'">select
                                     options</button>
                             </div>
                         </div>
@@ -1231,10 +1468,11 @@
                     <!--col-->
                     <div class="col-lg-3 col-md-4 col-sm-6 p-2">
                         <div class="card rounded-0 border-0">
-                            <div class="img-container">
+                            <div class="img-container position-relative">
                                 <img src="./images/rugby-crewneck-shirt-secondary.jpeg" class="card-img-bottom" alt="">
                                 <img src="./images/rugby-crewneck-shirt-primary.jpeg" class="card-img-top" alt="">
-                                <a href="#"
+                                <a href="product.html" class="stretched-link"></a>
+                                <a href="productModal" data-toggle="modal" data-target="#productModal"
                                     class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
                                     View</a>
 
@@ -1244,7 +1482,7 @@
                                 <h5 class="card-title">Rugby crewneck shirt</h5>
                                 <h6 class="h6 text-center font-weight-bold"><del class="text-muted text-nowrap">EGP
                                         1143.80</del> <span class="text-danger text-nowrap">EGP 921.40</span></h6>
-                                <button class="btn btn-outline-success align-self-center">select
+                                <button class="btn btn-select-options align-self-center" onclick="window.location.href='product.html'">select
                                     options</button>
                             </div>
                         </div>
@@ -1253,10 +1491,11 @@
                     <!--col-->
                     <div class="col-lg-3 col-md-4 col-sm-6 p-2">
                         <div class="card rounded-0 border-0">
-                            <div class="img-container">
+                            <div class="img-container position-relative">
                                 <img src="./images/band-collar-tunic-secondary.jpeg" class="card-img-bottom" alt="">
                                 <img src="./images/band-collar-tunic-primary.jpeg" class="card-img-top" alt="">
-                                <a href="#"
+                                <a href="product.html" class="stretched-link"></a>
+                                <a href="productModal" data-toggle="modal" data-target="#productModal"
                                     class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
                                     View</a>
 
@@ -1266,7 +1505,7 @@
                                 <h5 class="card-title">Band-collar tunic</h5>
                                 <h6 class="h6 text-center font-weight-bold"><del class="text-muted text-nowrap">EGP
                                         1472.90</del> <span class="text-danger text-nowrap">EGP 1332.90</span></h6>
-                                <button class="btn btn-outline-success align-self-center">select
+                                <button class="btn btn-select-options align-self-center" onclick="window.location.href='product.html'">select
                                     options</button>
                             </div>
                         </div>
@@ -1275,10 +1514,11 @@
                     <!--col-->
                     <div class="col-lg-3 col-md-4 col-sm-6 p-2">
                         <div class="card rounded-0 border-0">
-                            <div class="img-container">
+                            <div class="img-container position-relative">
                                 <img src="./images/cape-sunglasses-secondary.jpeg" class="card-img-bottom" alt="">
                                 <img src="./images/cape-sunglasses-primary.jpeg" class="card-img-top" alt="">
-                                <a href="#"
+                                <a href="product.html" class="stretched-link"></a>
+                                <a href="productModal" data-toggle="modal" data-target="#productModal"
                                     class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
                                     View</a>
 
@@ -1287,7 +1527,7 @@
                             <div class="card-body px-1 d-flex flex-column justify-content-start p-1">
                                 <h5 class="card-title">Cape sunglasses</h5>
                                 <h6 class="h6 text-center font-weight-bold">EGP 1069.70</h6>
-                                <button class="btn btn-outline-success align-self-center">select
+                                <button class="btn btn-select-options align-self-center" onclick="window.location.href='product.html'">select
                                     options</button>
                             </div>
                         </div>
@@ -1296,12 +1536,13 @@
                     <!--col-->
                     <div class="col-lg-3 col-md-4 col-sm-6 p-2">
                         <div class="card rounded-0 border-0">
-                            <div class="img-container">
+                            <div class="img-container position-relative">
                                 <img src="./images/ribbed-beanie-with-faux-fur-secondary.jpeg" class="card-img-bottom"
                                     alt="">
                                 <img src="./images/ribbed-beanie-with-faux-fur-primary.jpeg" class="card-img-top"
                                     alt="">
-                                <a href="#"
+                                    <a href="product.html" class="stretched-link"></a>
+                                <a href="productModal" data-toggle="modal" data-target="#productModal"
                                     class="view d-flex justify-content-center align-items-center text-decoration-none">Qick
                                     View</a>
 
@@ -1310,7 +1551,7 @@
                             <div class="card-body px-1 d-flex flex-column justify-content-start p-1">
                                 <h5 class="card-title">Ribbed beanie faux-fur</h5>
                                 <h6 class="h6 text-center font-weight-bold">EGP 740.60</h6>
-                                <button class="btn btn-outline-success align-self-center">select
+                                <button class="btn btn-select-options align-self-center" onclick="window.location.href='product.html'">select
                                     options</button>
                             </div>
                         </div>
@@ -1340,13 +1581,13 @@
                 <a class="px-0 mx-1" href=""><i class="fab fa-youtube"></i></a>
             </div>
             <div class="d-flex flex-sm-row flex-column my-2" id="links">
-                <a class="px-0 mx-1 text-center mb-1" href="#">MY ACCOUNT</a>
+                <a class="px-0 mx-1 text-center mb-1" href="signIn.html">MY ACCOUNT</a>
                 <P class="m-0 d-none d-sm-inline-block">|</P>
-                <a class="px-0 mx-1 text-center mb-1" href="#">MY WHISHLIST</a>
+                <a class="px-0 mx-1 text-center mb-1" href="wishlist.html">MY WHISHLIST</a>
                 <P class="m-0 d-none d-sm-inline-block">|</P>
                 <a class="px-0 mx-1 text-center mb-1" href="#">SUMMER CATALOG</a>
                 <P class="m-0 d-none d-sm-inline-block">|</P>
-                <a class="px-0 mx-1 text-center mb-1" href="#">CONTACT US</a>
+                <a class="px-0 mx-1 text-center mb-1" href="contactUs.html">CONTACT US</a>
             </div>
             <div>
                 <p class="m-0">All Rights Reserved. Hanger</p>
@@ -1360,6 +1601,7 @@
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/nouislider.min.js"></script>
+    <script src='./js/jquery.zoom.min.js'></script>
 
     <script src="./js/script.js"></script>
     <!-------------------------------JS------------------------------------------>

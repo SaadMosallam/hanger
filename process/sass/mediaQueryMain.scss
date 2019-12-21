@@ -1,26 +1,32 @@
 @media screen and (orientation:portrait) and (max-width: 1100px) {
+
     #essentials-men,
     #winter-women {
         height: 50vh;
     }
+
     #women-coats,
     #men-wear {
+
         #carousel-coats,
         #carousel-men {
             &>div {
                 padding-top: 50px;
             }
         }
+
         #background-coats,
-        #background-men{
-        height: 50vh;
+        #background-men {
+            height: 50vh;
         }
-        #background-men{
+
+        #background-men {
             background-position-y: 20%;
         }
-   
+
     }
 }
+
 @media (max-width: 991.98px) {
     #img-cards-overlay {
         .card {
@@ -33,6 +39,7 @@
 
     #women-coats,
     #men-wear {
+
         #carousel-coats,
         #carousel-men {
             &>div {
@@ -40,14 +47,37 @@
                 padding-top: 0px;
             }
         }
+
         #background-coats,
-        #background-men{
-        height: 50vh;
+        #background-men {
+            height: 50vh;
         }
-        #background-men{
+
+        #background-men {
             background-position-y: 20%;
         }
-   
+
+    }
+
+    .img-container {
+        .view {
+            opacity: 1;
+        }
+    }
+
+    //-------------------------prod page-------------------------------------------------------
+    .navbar-represent {
+        padding-top: 62px;
+    }
+
+}
+
+@media (min-width: 767.98px) {
+
+    .checkout-sidebar,
+    .cart-sidebar {
+        position: sticky;
+        top: 62px;
     }
 }
 
@@ -71,6 +101,18 @@
         }
     }
 
+    //-------------------------prod page-------------------------------------------------------
+    .prod-details {
+        .border-top {
+            &>div {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .checkout-sidebar {
+        border-top: 1px solid #CCCCCC;
+    }
 
 }
 
@@ -148,6 +190,26 @@
     #benefits {
         .row>div {
             border-right: none;
+        }
+    }
+
+    .cart , .checkout {
+        #pageTop {
+            z-index: 2;
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 0px 5px;
+            right: 5%;
+            bottom: 5%;
+        }
+    }
+
+    .prod-fullScreen {
+        button {
+            font-size: 2rem;
+        }
+    
+        button:first-of-type {
+            font-size: 1rem;
         }
     }
 }

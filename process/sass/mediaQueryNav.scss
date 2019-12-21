@@ -1,7 +1,23 @@
 @media (min-width: 991.98px) {
     .navbar.navbar-colored {
-        background-color: #de7071;
+        background-color: #FFF;
         animation: scale-down-height .5s ease-out both;
+        box-shadow: 0 0 5px rgba(0,0,0,0.2);
+
+        .dropdown{
+            .dropdown-toggle::after{
+                color: black;
+            }
+        }
+    
+        .nav-link{
+            color: black!important;
+        }
+
+        #navbarSearch{
+            position: fixed;
+            z-index: 10;
+        }
 
         .navbar-brand {
             animation: scale-down-top .5s ease-out both;
@@ -83,8 +99,25 @@
 
 @media (max-width: 991.98px) {
     .navbar {
-        background-color: #de7071;
+        background-color: #fff;
         animation: scale-down-height .5s ease-out both;
+        box-shadow: 0 0 5px rgba(0,0,0,0.2);
+
+        .dropdown{
+            .dropdown-toggle::after{
+                color: black;
+            }
+        }
+    
+        .nav-link{
+            color: black!important;
+        }
+
+        #navbarSearch{
+            position: fixed;
+            z-index: 10;
+        }
+
     }
 
     nav {
@@ -115,8 +148,13 @@
         position: absolute;
         top: 100%;
         left: 0;
-        background-color: #232323;
-        overflow-y: scroll;
+        right: 0;
+        background-color: rgba(35, 35, 35, 0.5);
+        .navbar-nav{
+            background-color: rgb(35, 35, 35);
+            height: 100%;
+            overflow-y: scroll;
+        }
     }
 
     .dropdown.shop,
@@ -137,6 +175,11 @@
         h1.nav-header {
             color: white !important;
         }
+
+        a.dropdown-item:active,a.dropdown-item:focus{
+            color: $rose !important;
+            background-color: #232323!important;
+        }
     }
     nav{
         .dropdown:active,
@@ -152,6 +195,7 @@
                 transition: 500ms;
             }
         }
+        
     }
     
 
@@ -161,15 +205,19 @@
                 font-size: 2rem;
             }
 
-            .btn-outline-success {
+            .btn-search {
                 font-size: 2rem;
             }
         }
     }
 
     #navbarProfile {
-        bottom: 0%;
+        bottom: 0%;   
+        .bg-white{
+            height: 90vh;
+        }
     }
+    
 
     .collapse{
         .nav-link{
@@ -185,7 +233,8 @@
 
 @media (min-width: 575.98px) and (max-width: 991.98px) {
     .navbar-collapse {
-        width: 40vw;
+        .navbar-nav{
+            width: 40vw;        }
     }
 }
 
@@ -200,7 +249,9 @@
 
 @media (max-width: 575.98px) {
     .navbar-collapse {
-        width: 80vw;
+        .navbar-nav{
+            width: 80vw;
+        }
     }
 
     #navbarSearch {
@@ -209,7 +260,7 @@
                 font-size: 1rem;
             }
 
-            .btn-outline-success {
+            .btn-search {
                 font-size: 1rem;
             }
 
