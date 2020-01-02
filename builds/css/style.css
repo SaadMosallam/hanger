@@ -1,3 +1,49 @@
+body {
+  font-family: 'Raleway', sans-serif; }
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: 'Raleway', sans-serif; }
+
+.btn {
+  box-shadow: none !important; }
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #222;
+  z-index: 200; }
+  .preloader div {
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    width: 70px;
+    height: 70px;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .preloader .loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 4px solid #Fff;
+    animation: loader 2s infinite ease; }
+  .preloader .loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in; }
+
 @keyframes swing-right-bck {
   0% {
     transform: rotateY(0);
@@ -255,9 +301,6 @@ nav {
 .navbar-brand img {
   width: 100px;
   height: 100px; }
-
-.btn {
-  box-shadow: none !important; }
 
 #nav-right .nav-item, #nav-left .nav-item {
   font-size: 1.25rem; }
@@ -551,51 +594,6 @@ nav .dropdown .dropdown-toggle::after {
 .fa-angle-right:before,
 .fa-angle-left:before {
   font-size: 2.7rem; }
-
-body {
-  font-family: 'Raleway', sans-serif; }
-
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  font-family: 'Raleway', sans-serif; }
-
-.preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #222;
-  z-index: 200; }
-  .preloader div {
-    position: absolute;
-    left: 45%;
-    top: 45%;
-    width: 70px;
-    height: 70px;
-    background-color: #222;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; }
-
-.loader {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  border: 4px solid #Fff;
-  animation: loader 2s infinite ease; }
-
-.loader-inner {
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
-  background-color: #fff;
-  animation: loader-inner 2s infinite ease-in; }
 
 #img-cards-overlay {
   background-color: #f9f9f9; }
@@ -1105,6 +1103,12 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-origin {
   .custom-radios input[type="radio"]#color-2-AA149 + label span {
     background-color: #2d2d2f; }
   .custom-radios input[type="radio"]#color-3-AA149 + label span {
+    background-color: #212131; }
+  .custom-radios input[type="radio"]#color-1-AA149-modal + label span {
+    background-color: #d9bc9b; }
+  .custom-radios input[type="radio"]#color-2-AA149-modal + label span {
+    background-color: #2d2d2f; }
+  .custom-radios input[type="radio"]#color-3-AA149-modal + label span {
     background-color: #212131; }
   .custom-radios input[type="radio"]:checked + label span img {
     opacity: 1; }

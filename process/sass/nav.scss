@@ -13,10 +13,6 @@ nav{
     }
 }
 
-.btn{
-    box-shadow: none!important;
-}
-
 #nav-right,#nav-left{
     .nav-item{
         font-size: 1.25rem;
@@ -30,6 +26,7 @@ nav{
     box-shadow: none;
     outline: none;
 }
+
 nav{
     .dropdown{
         .nav-header{

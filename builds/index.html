@@ -564,7 +564,7 @@
             <!--row-->
         </section>
 
-        <!---product Modal-->
+        <!--product modal-->
         <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalTitle"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered ml-4 ml-sm-5 ml-md-auto" role="document">
@@ -574,13 +574,13 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                         <div class="row no-gutters pt-3">
-                            <div class="col-lg-8 col-md-7 col-12 d-flex">
+                            <div class="col-lg-8 col-md-7 col-12 d-flex thumbnails-parent">
                                 <div class="row no-gutters pr-md-3 pr-sm-0 px-1">
 
                                     <ul class="col-lg-2 col-md-12 col-sm-2 order-lg-1 order-md-2 
-                                                order-sm-1 order-2 thumbnails d-flex flex-lg-column flex-md-row 
-                                                flex-sm-column align-items-start align-items-lg-end justify-content-center 
-                                                justify-content-sm-start pr-2 pb-1 mb-0 mt-sm-0 mt-2">
+                                        order-sm-1 order-2 thumbnails d-flex flex-lg-column flex-md-row 
+                                        flex-sm-column align-items-start align-items-lg-end justify-content-center 
+                                        justify-content-sm-start pr-2 pb-1 mb-0 mt-sm-0 mt-2">
                                         <li class="zoom-active vintage-camel">
                                             <span data-standard="./images/vintage-camel-topcoat-primary-zoom.jpeg">
                                                 <img src="./images/vintage-camel-topcoat-primary-thumbnail.jpeg"
@@ -608,12 +608,12 @@
                                                 <img src="./images/vintage-camel-topcoat-5-thumbnail.jpeg" alt="" />
                                             </span>
                                         </li>
-                                        <li class="zoom-active d-none navy">
+                                        <li class="d-none navy">
                                             <span data-standard="./images/AA149_Navy_zoom.jpeg">
                                                 <img src="/images/AA149_Navy_thumbnail.jpeg" alt="" />
                                             </span>
                                         </li>
-                                        <li class="zoom-active d-none hthr">
+                                        <li class="d-none hthr">
                                             <span data-standard="./images/AA149_Hthr_Charcoal_zoom.jpeg">
                                                 <img src="/images/AA149_Hthr_Charcoal_thumbnail.jpeg" alt="" />
                                             </span>
@@ -621,8 +621,8 @@
                                     </ul>
                                     <!--col-->
                                     <div class="col-lg-10 col-md-12 col-sm-10 
-                                            order-lg-2 order-md-1 order-sm-2 order-1 position-relative">
-                                        <div class="zoom position-relative" id="zoomItem">
+                                    order-lg-2 order-md-1 order-sm-2 order-1 position-relative zoom-parent">
+                                        <div class="zoom position-relative zoomItem">
                                             <img class="img-fluid"
                                                 src="./images/vintage-camel-topcoat-primary-zoom.jpeg" alt="" />
                                             <button class="btn rounded-0 bg-light prod-expand"><i
@@ -656,30 +656,31 @@
                                 <h2 class="text-muted">Item AA149</h2>
                                 <p class="text-nowrap font-weight-bold"><span class="">EGP 7411.70</span>
                                 </p>
-                                <p class="text-muted">Color: <span class="font-weight-bold text-dark"
-                                        id="prod-AA149-color">Vintage
+                                <p class="text-muted">Color: <span class="font-weight-bold text-dark prod-color">Vintage
                                         Camel</span></p>
-                                <div class="custom-radios d-flex flex-row px-5" id="prod-AA149-colors">
+                                <div class="custom-radios d-flex flex-row px-5 prod-colors">
                                     <div class="mx-1">
-                                        <input type="radio" id="color-1-AA149" name="color" value="Vintage Camel"
-                                            checked>
-                                        <label for="color-1-AA149">
+                                        <input type="radio" id="color-1-AA149-modal" name="color-modal"
+                                            value="vintage-camel" data-val="Vintage Camel" checked>
+                                        <label for="color-1-AA149-modal">
                                             <span>
                                                 <img src="./images/check-icn.svg" alt="Checked Icon" />
                                             </span>
                                         </label>
                                     </div>
                                     <div class="mx-1">
-                                        <input type="radio" id="color-2-AA149" name="color" value="Hthr Charcoal">
-                                        <label for="color-2-AA149">
+                                        <input type="radio" id="color-2-AA149-modal" name="color-modal" value="hthr"
+                                            data-val="Hthr Charcoal">
+                                        <label for="color-2-AA149-modal">
                                             <span>
                                                 <img src="./images/check-icn.svg" alt="Checked Icon" />
                                             </span>
                                         </label>
                                     </div>
                                     <div class="mx-1">
-                                        <input type="radio" id="color-3-AA149" name="color" value="Navy">
-                                        <label for="color-3-AA149">
+                                        <input type="radio" id="color-3-AA149-modal" name="color-modal" value="navy"
+                                            data-val="Navy">
+                                        <label for="color-3-AA149-modal">
                                             <span>
                                                 <img src="./images/check-icn.svg" alt="Checked Icon" />
                                             </span>
@@ -687,26 +688,26 @@
                                     </div>
                                 </div>
                                 <!--colors radio container-->
-                                <p class="text-muted">Size: <span class="font-weight-bold text-dark"
-                                        id="prod-AA149-size">Select
+                                <p class="text-muted">Size: <span class="font-weight-bold text-dark prod-size"
+                                        id="prod-AA149-size-modal">Select
                                         a Size</span></p>
-                                <div id="prod-AA149-sizes" class="mb-2">
+                                <div id="prod-AA149-sizes-modal" class="mb-2 prod-sizes">
                                     <div class="option-group">
                                         <div class="option-container">
 
-                                            <input class="option-input" id="prod-AA149-1" type="radio" name="prod-AA149"
-                                                value="S" />
-                                            <input class="option-input" id="prod-AA149-2" type="radio" name="prod-AA149"
-                                                value="M" />
+                                            <input class="option-input" id="prod-AA149-1-modal" type="radio"
+                                                name="prod-AA149-modal" value="S" />
+                                            <input class="option-input" id="prod-AA149-2-modal" type="radio"
+                                                name="prod-AA149-modal" value="M" />
 
-                                            <label class="option" for="prod-AA149-1">
+                                            <label class="option" for="prod-AA149-1-modal">
                                                 <span class="option__indicator"></span>
                                                 <span class="option__label">
                                                     <sub>S</sub>
                                                 </span>
                                             </label>
 
-                                            <label class="option" for="prod-AA149-2">
+                                            <label class="option" for="prod-AA149-2-modal">
                                                 <span class="option__indicator"></span>
                                                 <span class="option__label">
                                                     <sub>M</sub>
@@ -718,19 +719,19 @@
                                     <div class="option-group">
                                         <div class="option-container">
 
-                                            <input class="option-input" id="prod-AA149-3" type="radio" name="prod-AA149"
-                                                value="L" />
-                                            <input class="option-input" id="prod-AA149-4" type="radio" name="prod-AA149"
-                                                value="XL" />
+                                            <input class="option-input" id="prod-AA149-3-modal" type="radio"
+                                                name="prod-AA149-modal" value="L" />
+                                            <input class="option-input" id="prod-AA149-4-modal" type="radio"
+                                                name="prod-AA149-modal" value="XL" />
 
-                                            <label class="option" for="prod-AA149-3">
+                                            <label class="option" for="prod-AA149-3-modal">
                                                 <span class="option__indicator"></span>
                                                 <span class="option__label">
                                                     <sub>L</sub>
                                                 </span>
                                             </label>
 
-                                            <label class="option" for="prod-AA149-4">
+                                            <label class="option" for="prod-AA149-4-modal">
                                                 <span class="option__indicator"></span>
                                                 <span class="option__label">
                                                     <sub>XL</sub>
@@ -770,7 +771,7 @@
             </div>
         </div>
         <!--modal-->
-        <!---product Modal-->
+        <!--product modal-->
 
         <section id="men-wear">
             <div class="row no-gutters h-100">

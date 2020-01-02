@@ -104,40 +104,6 @@
     background-position: top;
 }
 
-.carousel-fade {
-    // .carousel-item {
-    //     opacity: 0;
-    //     transition-duration: 1s;
-    //     transition-property: opacity;
-    //     transition-timing-function: ease-in-out;
-    // }
-
-    // .carousel-item.active,
-    // .carousel-item-next.carousel-item-left,
-    // .carousel-item-prev.carousel-item-right {
-    //     opacity: 1;
-    //     transition: 500ms opacity ease-in;
-    //     z-index: 2;
-    // }
-
-    // .active.carousel-item-left,
-    // .active.carousel-item-right {
-    //     opacity: 0;
-    //     transition: 500ms opacity ease-out;
-    //     z-index: 1;
-    // }
-
-    // .carousel-item-next,
-    // .carousel-item-prev,
-    // .carousel-item.active,
-    // .active.carousel-item-left,
-    // .active.carousel-item-prev {
-    //     transform: translateX(0)!important;
-    //     transform: translate3d(0, 0, 0)!important;
-    // }
-
-}
-
 
 .thumbnail {
     position: absolute;
