@@ -16,18 +16,13 @@ $(document).ready(function () {
 
         //detecting document width and height
         var screenWidth = $(document).width();
-        var screenHeight = $(window).height();
         // console.log(screenWidth, screenHeight);
 
 
 
 
         if (screenWidth < 992) {
-            //set the height of the navbar collapse equal to the height of the document
-            $('#navbarNavCollapse').css({
-                height: screenHeight - 61
-            });
-            //adding slide animation up/down when clicking on dropdown toggle
+            
 
             //close navbar collapse when clicking the underlying layer
             $('.navbar-collapse').click(function (e) {
@@ -133,6 +128,7 @@ $(document).ready(function () {
             height: "0%"
         }, 400, function () {
             $('#navbarSearch').collapse('hide');
+            $('body').removeClass('modal-open');
         });
 
     });
@@ -141,12 +137,17 @@ $(document).ready(function () {
             .animate({
                 height: "100%"
             }, 400, function () {
+                $('body').addClass('modal-open');
                 $('#navbarSearch input').focus();
             });
     });
     //--------------------------------- navbar right collapse Profile --------------------------------------//
+    $('#navbarProfile').on('show.bs.collapse', function () {
+        $('body').addClass('modal-open');
+    });
     $('#navbarProfile .close').click(function (e) {
         $('#navbarProfile').collapse('hide');
+        $('body').removeClass('modal-open');
     });
     //--------------------------------- Carousel ------------------------------------------------------------//
     if ($('.carousel').length > 0) {
@@ -418,7 +419,10 @@ $(document).ready(function () {
             //check to see if this current container is within viewport
             if ((element_bottom_position >= window_top_position) &&
                 (element_top_position <= window_bottom_position)) {
-                $element.addClass('in-view');
+                    
+                        $element.addClass('in-view');
+                    
+                
             } else {
                 //uncomment if you want animation every time the element in view
                 //now it has animation only the first time the page loads

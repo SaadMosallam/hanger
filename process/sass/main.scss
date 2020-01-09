@@ -1340,9 +1340,16 @@ li.zoom-active::after {
     .modal-dialog{
         max-width: 90%!important;
     }
+    .modal-header{
+        border: none!important;
+        // background-color: red;
+        padding: 0;
+        padding-right: 10px;
+    }
     .close{
         font-size: 3rem;
         outline: none;
+        
     }
 }
 

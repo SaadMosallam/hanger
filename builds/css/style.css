@@ -22,8 +22,8 @@ body {
   z-index: 200; }
   .preloader div {
     position: absolute;
-    left: 45%;
-    top: 45%;
+    left: calc(50% - 35px);
+    top: calc(50% - 35px);
     width: 70px;
     height: 70px;
     background-color: #222;
@@ -1555,6 +1555,10 @@ li.zoom-active::after {
   width: 100%; }
   #productModal .modal-dialog {
     max-width: 90% !important; }
+  #productModal .modal-header {
+    border: none !important;
+    padding: 0;
+    padding-right: 10px; }
   #productModal .close {
     font-size: 3rem;
     outline: none; }
@@ -2031,6 +2035,8 @@ footer {
     left: -200%; } }
 
 @media (max-width: 991.98px) {
+  #navbarNavCollapse {
+    height: calc(100vh - 61px); }
   .navbar {
     background-color: #fff;
     animation: scale-down-height .5s ease-out both;

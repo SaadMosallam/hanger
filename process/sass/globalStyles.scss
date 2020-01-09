@@ -23,8 +23,8 @@ body {
 
     div {
         position: absolute;
-        left: 45%;
-        top: 45%;
+        left: calc(50% - 35px);
+        top: calc(50% - 35px);
         width: 70px;
         height: 70px;
         background-color: #222;
